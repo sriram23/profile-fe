@@ -50,13 +50,14 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      <p>
-        Made in{" "}
+      {/* TODO: Uncomment in future if required */}
+      {/* <p>
+        Made with{" "}
         <span className="heart">
           <FaHeart />
         </span>{" "}
-        with React
-      </p>
+        in React
+      </p> */}
     </div>
   );
 }

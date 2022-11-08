@@ -3,6 +3,7 @@ import Footer from "./components/Footer/footer";
 import Header from "./components/header/header";
 import Profile from "./components/profile/profile";
 import WorkHistory from "./components/workHistory/workhistory";
+import Tweets from "./components/Tweets/tweets";
 import "./styles.css";
 
 export default function App() {
@@ -13,7 +14,10 @@ export default function App() {
       </div>
       <Profile />
       <WorkHistory />
-      <Blogs />
+      <div className="content-section">
+        <Blogs />
+        <Tweets/>
+      </div>
       <Footer />
     </div>
   );

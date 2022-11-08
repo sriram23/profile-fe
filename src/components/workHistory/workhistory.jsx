@@ -11,8 +11,12 @@ export default function WorkHistory() {
       // period: "July 2021 - Present",
       designations: [
         {
+          title: "Software Engineer II",
+          period: "September 2022 - Present"
+        },
+        {
           title: "Software Engineer I",
-          period: "July 2021 - Present"
+          period: "July 2021 - September 2022"
         }
       ],
       image: Dell

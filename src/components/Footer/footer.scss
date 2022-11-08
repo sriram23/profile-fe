@@ -11,6 +11,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 587px) {
+     flex-direction: column;   
+    }
   .social-card {
     border: .25rem solid #4285f4;
     background: white;
