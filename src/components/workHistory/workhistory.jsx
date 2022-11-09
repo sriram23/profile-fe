@@ -68,6 +68,7 @@ export default function WorkHistory() {
           ))}
         </div>
       ))}
+      <span id="dash"></span>
     </div>
   );
 }

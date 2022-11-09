@@ -1,5 +1,6 @@
 .work-container {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   background: #4285f4;
@@ -12,13 +13,17 @@
 .work-card {
   border: .25rem solid #4285f4;
   background: white;
+  z-index: 2;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 1rem 1rem 1rem 0 rgba(0,0,0,0.4);
     margin: 1rem;
-    min-width: 75vw;
+    width: 25rem;
+    @media screen and (max-width: 587px) {
+      width: 75vw;
+    }
     padding: 1rem;
     .firm {
       font-weight: 700;
@@ -38,4 +43,10 @@
         width: 100%;
       }
     }
+}
+#dash {
+  top: 10rem;
+  position: absolute;
+  border: 5px double white;
+  height: 50rem;
 }
