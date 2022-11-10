@@ -14,10 +14,8 @@ export default function App() {
       </div>
       <Profile />
       <WorkHistory />
-      <div className="content-section">
-        <Blogs />
-        <Tweets/>
-      </div>
+      <Blogs />
+      <Tweets/>
       <Footer />
     </div>
   );

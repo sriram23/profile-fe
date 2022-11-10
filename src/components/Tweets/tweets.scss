@@ -4,8 +4,13 @@
     align-items: center;
     justify-content: center;
     flex: 1;
+    background: #4285f4;
+    h2 {
+        color: white;
+    }
     .tweet-card {
         flex: 1;
         width: 80%;
+        margin: 1rem 0;
     }
 }

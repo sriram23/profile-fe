@@ -31,6 +31,11 @@ const socialLinks = [
     link: "https://sriram23.hashnode.dev/",
     imageLink:
       "https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png?auto=compress"
+  },
+  {
+    name: "Linkedin",
+    link: "https://linkedin.com/in/imsriramb",
+    imageLink: "https://cdn-icons-png.flaticon.com/512/174/174857.png"
   }
 ];
 
