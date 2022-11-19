@@ -9,6 +9,7 @@ const TweetCard = ({tweet}) => {
     const [isRetweet, setRetweet] = useState(false);
     const [userHandle, setUserHandle] = useState("")
     const [userName, setUserName] = useState("")
+    const [mentionHandle, setMentionHandle] = useState("")
     const [text, setText] = useState(tweet.text)
 
     useEffect(() => {
@@ -28,6 +29,10 @@ const TweetCard = ({tweet}) => {
             const twt = split.slice(2,) 
             setText(twt.join(" "))
         }
+        if(split[0].includes("@")) {
+            setMentionHandle(split[0].slice(1,))
+            setText(split.slice(1,).join(" "))
+        }
     }, [tweet])
     return (
         <div className="tweet-card">
@@ -38,7 +43,7 @@ const TweetCard = ({tweet}) => {
                 <a href={`https://twitter.com/${userHandle || authorHandle}`}><span className="tweet-handle">@{userHandle || authorHandle}</span></a>
             </div>
             <div className="tweet-text">
-                {text}
+                {mentionHandle && (<a href={`https://twitter.com/${mentionHandle}`}>@{mentionHandle}</a>)} {text}
             </div>
             </a>
         </div>
