@@ -58,6 +58,32 @@
       box-shadow: 1rem 1rem 1rem 0 rgba(122, 82, 82, 0.6);
     }
   }
+  .blog-button-container {
+    a{
+      text-decoration: none;
+    }
+    .medium-button, .hashnode-button {
+      button {
+        color: #ffffff;
+        border: none;
+        height: 3rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        margin: 0.5rem;
+        cursor: pointer;
+      }
+    }
+    .medium-button {
+      button{
+        background: #000000;
+      }
+    }
+    .hashnode-button {
+      button {
+        background: #4285f4;
+      }
+    }
+  }
 }
 
 .chip {
