@@ -1,0 +1,18 @@
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    background: #4285f4;
+    border-top: 2px solid #ffffff;
+    h2 {
+        text-align: center;
+        color: #ffffff;
+    }
+    min-height: 100vh;
+    .carousel {
+        .carousel-image {
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}

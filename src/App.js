@@ -5,6 +5,7 @@ import Profile from "./components/profile/profile";
 import WorkHistory from "./components/workHistory/workhistory";
 import Tweets from "./components/Tweets/tweets";
 import "./styles.css";
+import Testimonial from "./components/Testimonial/testimonial";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       </div>
       <Profile />
       <WorkHistory />
+      <Testimonial/>
       <Blogs />
       <Tweets/>
       <Footer />
