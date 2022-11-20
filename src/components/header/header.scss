@@ -6,6 +6,7 @@ $header-color: #4285f4;
   background: $header-color;
   box-shadow: 1rem 1rem 1rem 0 rgba(0,0,0,0.4);
   height: 7rem;
+  transition: height 2s;
   h1 {
     margin: unset;
     font-family: 'Reggae One', cursive;
@@ -14,6 +15,7 @@ $header-color: #4285f4;
     border-radius: 50%;
     padding: 1rem;
     margin: 1rem;
+    transition: all 1s;
   }
   h1:hover {
     color: white;
@@ -25,5 +27,17 @@ $header-color: #4285f4;
     line-height: 2rem;
     margin: 2rem;
     color: white;
+    transition: all 1s;
+  }
+}
+.header-scrolled {
+  height: 3rem;
+  h1 {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  h2 {
+    font-size: 2rem;
   }
 }
