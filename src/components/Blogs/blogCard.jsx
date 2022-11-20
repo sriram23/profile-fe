@@ -1,8 +1,9 @@
 import AuthorCard from "./authorCard";
 import "./blogs.scss";
 import CategoryChip from "./categoryChip";
-import PLACEHOLDER from "../../assets/placeholder.png";
 const BlogCard = ({ blog, src }) => {
+  const placeholderString = blog.title.length > 20 ? blog.title.slice(0,20) + ".." : blog.title
+  const PLACEHOLDER = `https://via.placeholder.com/900/4285f4/ffffff/500x200.png?text=${placeholderString}`
   const splitImage = (text) => {
     // Splitting with ' " ' since the links are inside  " "
     const links = text && text.split("\"")
