@@ -74,7 +74,7 @@ const Contact = () => {
         setToastIcon('\u2705')
         toggleToast(true);
         setPayload(payloadInitial);
-        checkCanSend();
+        setCanSend(false);
         setSenderClass(initialClass);
         setEmailClass(initialClass);
         setMessageClass(initialClass);
