@@ -1,0 +1,65 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .form-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        padding: 1rem;
+        width: 40rem;
+        background: #4285f4;
+        color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        .form-input {
+            flex: 1;
+            width: 80%;
+            border-radius: 0.25rem;
+            border: none;
+            margin: 0.5rem;
+            &.form-error {
+                outline: 1px solid red;
+                box-shadow: 0rem 0rem 1rem 0 rgba(255,0,0,0.8);
+            }
+            &.form-success {
+                outline: 1px solid green;
+                box-shadow: 0rem 0rem 1rem 0 rgba(0,255,0,0.8);
+            }
+            &:focus {
+                outline: 2px solid #4285f4;
+                border: none;
+            }
+        }
+        .send-button {
+            border: none;
+            height: 2rem;
+            margin: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: #4285f4;
+            background: #ffffff;
+            cursor: pointer;
+            &:disabled {
+                background-color: grey;
+            }
+            &:hover {
+                box-shadow: 1rem 1rem 1rem 0 rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+}
+.toaster {
+    position: absolute;
+    min-width: 10rem;
+    padding: 2rem;
+    bottom: 2rem;
+    border: 5px solid #4285f4;
+    background: #ffffff;
+    border-radius: 1rem;
+    .close-button {
+        margin: 0.5rem;
+        cursor: pointer
+    }
+}

@@ -6,10 +6,11 @@ import WorkHistory from "./components/workHistory/workhistory";
 import Tweets from "./components/Tweets/tweets";
 import "./styles.css";
 import Testimonial from "./components/Testimonial/testimonial";
+import Contact from "./components/contact/contact";
 
 export default function App() {
   return (
-    <div>
+    <div className="main-container">
       <div className="header">
         <Header />
       </div>
@@ -18,6 +19,7 @@ export default function App() {
       <Testimonial/>
       <Blogs />
       <Tweets/>
+      <Contact/>
       <Footer />
     </div>
   );

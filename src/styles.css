@@ -6,6 +6,9 @@ body {
 .App {
   border: 2px solid red;
 }
+.main-container {
+  position: relative;
+}
 .header {
   width: 100%;
   position: fixed;
