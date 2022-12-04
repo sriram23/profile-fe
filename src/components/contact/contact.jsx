@@ -1,7 +1,7 @@
 import { useState } from "react";
 import callApi from "../axios/axios";
 import "./contact.scss";
-const Contact = () => {
+const Contact = ({onTriggerToast}) => {
   const EMAIL_REGEX =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const payloadInitial = {
@@ -15,9 +15,6 @@ const Contact = () => {
   const [senderClass, setSenderClass] = useState(initialClass);
   const [emailClass, setEmailClass] = useState(initialClass);
   const [messageClass, setMessageClass] = useState(initialClass);
-  const [toastMessage, setToastMessage] = useState("");
-  const [showToast, toggleToast] = useState(false);
-  const [toastIcon, setToastIcon] = useState('\u274c')
   const checkCanSend = () => {
     setCanSend(
       payload &&
@@ -70,9 +67,7 @@ const Contact = () => {
     callApi
       .post("/email", payload)
       .then((res) => {
-        setToastMessage(res.data);
-        setToastIcon('\u2705')
-        toggleToast(true);
+        onTriggerToast(res.data)
         setPayload(payloadInitial);
         setCanSend(false);
         setSenderClass(initialClass);
@@ -118,20 +113,6 @@ const Contact = () => {
           Send Message
         </button>
       </form>
-      {showToast && (
-        <div className="toaster">
-          {toastMessage}
-          <span
-            className="close-button"
-            onClick={() => {
-              setToastMessage("");
-              toggleToast(false);
-            }}
-          >
-            {toastIcon}
-          </span>
-        </div>
-      )}
     </div>
   );
 };

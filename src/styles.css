@@ -21,12 +21,45 @@ body {
   align-items: flex-start;
 }
 
+.toaster {
+  width: 100%;
+  position: fixed;
+  top: 2rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s;
+}
+.toaster-hide {
+  opacity: 0;
+}
+.toast-container {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 5px solid #4285f4;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.close-button {
+  margin: 1rem;
+  cursor: pointer;
+}
 @media screen and (max-width: 587px) {
   .content-section {
     display: flex;
     flex-direction: column;
     align-items: stretch;
   }    
+  .toast-container {
+    flex: 1;
+    height: 3rem;
+  }
 }
 * {
   font-family: "Exo 2", sans-serif;

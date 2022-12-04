@@ -13,12 +13,16 @@
         color: #ffffff;
         border-radius: 1rem;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        @media screen and (max-width: 587px) {
+            width: 80%;
+        }
         .form-input {
             flex: 1;
             width: 80%;
             border-radius: 0.25rem;
             border: none;
             margin: 0.5rem;
+            padding: 1rem;
             &.form-error {
                 outline: 1px solid red;
                 box-shadow: 0rem 0rem 1rem 0 rgba(255,0,0,0.8);
@@ -34,32 +38,19 @@
         }
         .send-button {
             border: none;
-            height: 2rem;
+            height: 3rem;
             margin: 1rem;
-            padding: 0.5rem;
+            padding: 1rem;
             border-radius: 0.5rem;
             color: #4285f4;
             background: #ffffff;
             cursor: pointer;
             &:disabled {
-                background-color: grey;
+                background-color: #CAD5E2;
             }
             &:hover {
                 box-shadow: 1rem 1rem 1rem 0 rgba(0, 0, 0, 0.6);
             }
         }
-    }
-}
-.toaster {
-    position: absolute;
-    min-width: 10rem;
-    padding: 2rem;
-    bottom: 2rem;
-    border: 5px solid #4285f4;
-    background: #ffffff;
-    border-radius: 1rem;
-    .close-button {
-        margin: 0.5rem;
-        cursor: pointer
     }
 }
