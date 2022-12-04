@@ -80,7 +80,7 @@ const Contact = ({onTriggerToast}) => {
       });
   };
   return (
-    <div className="form-container">
+    <section className="form-container">
       <h2 className="form-title">Write to me</h2>
       <form onSubmit={(e) => sendMessage(e)} className="form-container">
         <label>Your Name</label>
@@ -113,7 +113,7 @@ const Contact = ({onTriggerToast}) => {
           Send Message
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 

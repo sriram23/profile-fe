@@ -7,7 +7,7 @@ $header-color: #4285f4;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   height: 7rem;
   transition: height 2s;
-  h1 {
+  .header-icon {
     margin: unset;
     font-family: 'Reggae One', cursive;
     color: $header-color;
@@ -17,11 +17,7 @@ $header-color: #4285f4;
     margin: 1rem;
     transition: all 1s;
   }
-  h1:hover {
-    color: white;
-    background: $header-color;
-  }
-  h2 {
+  .header-title {
     font-family: 'Exo 2', sans-serif;
     font-size: 3rem;
     line-height: 2rem;
@@ -32,12 +28,12 @@ $header-color: #4285f4;
 }
 .header-scrolled {
   height: 3rem;
-  h1 {
+  .header-icon {
     font-size: 1rem;
     padding: 0.5rem;
     margin: 0.5rem;
   }
-  h2 {
+  .header-title {
     font-size: 2rem;
   }
 }

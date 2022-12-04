@@ -14,7 +14,7 @@ export default function Blogs() {
     })
   }
   return (
-    <div className="blogs-section">
+    <section className="blogs-section">
       <h2>Blogs</h2>
       <div className="blog-container">
           {blogs && blogs.map(blog => (
@@ -25,6 +25,6 @@ export default function Blogs() {
         <span className="medium-button"><a href="https://medium.com/@sriram23"><button>Check more in Medium</button></a></span>
         <span className="hashnode-button"><a href="https://sriram23.hashnode.dev"><button>Check more in Hashnode</button></a></span>
       </div>
-    </div>
+    </section>
   );
 }

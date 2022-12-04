@@ -41,8 +41,8 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <div className="footer-container">
-      <h2>Social Links</h2>
+    <footer className="footer-container">
+      <h2>Let's Connect</h2>
       <div className="social-section">
         {socialLinks.map((media) => (
           <a className="social-card" href={media.link} target="_blank">
@@ -63,6 +63,6 @@ export default function Footer() {
         </span>{" "}
         in React
       </p> */}
-    </div>
+    </footer>
   );
 }

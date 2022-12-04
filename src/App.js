@@ -4,6 +4,7 @@ import Header from "./components/header/header";
 import Profile from "./components/profile/profile";
 import WorkHistory from "./components/workHistory/workhistory";
 import Tweets from "./components/Tweets/tweets";
+import About from "./components/about/about"
 import "./styles.css";
 import Testimonial from "./components/Testimonial/testimonial";
 import Contact from "./components/contact/contact";
@@ -20,6 +21,7 @@ export default function App() {
         <Header />
       </div>
       <Profile />
+      <About/>
       <WorkHistory />
       <Testimonial/>
       <Blogs />
