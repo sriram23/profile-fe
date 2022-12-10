@@ -117,7 +117,6 @@
       border: 0.25rem solid #ffffff;
       border-radius: 50%;
       margin-right: 1rem;
-      box-shadow: 0.75rem 0.75rem 0.75rem 0 rgba(0,0,0,0.4);
       img {
         width: 100%;
         border-radius: 50%;
@@ -134,7 +133,9 @@
   }
   .blog-icon {
     max-width: 2rem;
+    padding: 0.2rem;
     margin: unset;
+    background: #ffffff;
     img {
       width: 100%;
     }

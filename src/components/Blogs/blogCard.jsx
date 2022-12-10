@@ -2,13 +2,12 @@ import AuthorCard from "./authorCard";
 import "./blogs.scss";
 import CategoryChip from "./categoryChip";
 const BlogCard = ({ blog, src }) => {
-  const placeholderString = blog.title.length > 20 ? blog.title.slice(0,20) + ".." : blog.title
-  const PLACEHOLDER = `https://via.placeholder.com/900/4285f4/ffffff/500x200.png?text=${placeholderString}`
+  const PLACEHOLDER = `https://via.placeholder.com/900/4285f4/ffffff/500x200.png?text=${blog.title}`
   const splitImage = (text) => {
     // Splitting with ' " ' since the links are inside  " "
     const links = text && text.split("\"")
     // Checking for image extension inside the string
-    return links && links.length && links.find(txt => txt.includes(".png" || ".jpg" || ".svg" || ".jpeg" || ".gif")) || null;
+    return links && links.length && links.find(txt => txt.includes(".png") || txt.includes(".jpg") || txt.includes(".svg") || txt.includes(".jpeg") || txt.includes(".gif")) || null;
   }
   return(
   <a href={blog.link} className="blog-card" target="_blank">
@@ -19,7 +18,7 @@ const BlogCard = ({ blog, src }) => {
     ></AuthorCard>
     <h3>{blog.title}</h3>
     <figure className="thumbnail">
-      <img src={splitImage(blog["content:encoded"]) || PLACEHOLDER} alt="Thumbnail" />
+      <img src={splitImage(blog["content:encoded"]) || splitImage(blog["content"]) || PLACEHOLDER} alt="Thumbnail" />
     </figure>
     <span>
       {(blog["content:encodedSnippet"] &&
