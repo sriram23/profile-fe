@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./header.scss";
-import image from "../../assets/sriram_normal.jpg";
-import bwimage from "../../assets/sriram_bnw.jpg";
 
 export default function Header() {
   const [isScrolled, setScrolled] = useState(false);
