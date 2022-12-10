@@ -43,7 +43,6 @@ const Contact = ({onTriggerToast}) => {
       email,
     }));
     checkCanSend();
-    ("form-input form-error");
     if (email.match(EMAIL_REGEX)) {
       setEmailClass("form-input form-success");
     } else {

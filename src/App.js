@@ -42,7 +42,7 @@ Native, Vue.js, and of course HTML/CSS." />
       <div className={`toaster ${!showToast && 'toaster-hide'}`}>
         <div className="toast-container">
 
-          {toastMessage && toastMessage}
+          {toastMessage}
           <div
             className="close-button"
             onClick={() => {

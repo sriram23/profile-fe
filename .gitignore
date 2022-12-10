@@ -2,3 +2,7 @@ node_modules
 build
 .env
 *firebase*
+.scannerwork
+sonarqube/extensions
+sonarqube/data
+sonarqube/logs
