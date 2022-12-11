@@ -19,8 +19,8 @@ const handleScroll = () => {
 }
   return (
     <header className={`header-container ${isScrolled && 'header-scrolled'}`}>
-      <h1 className="header-icon">SR</h1>
-      <h1 className="header-title">Sriram</h1>
+      <h2 className="header-icon">SR</h2>
+      <h2 className="header-title">Sriram</h2>
     </header>
   );
 }
