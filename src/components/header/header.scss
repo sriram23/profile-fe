@@ -36,3 +36,23 @@ $header-color: #4285f4;
     font-size: 2rem;
   }
 }
+
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    height: 2rem;
+    line-height: 2rem;
+    // border: 2px solid red;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    &:hover {
+      color: #4285f4;
+      background: #ffffff;
+    }
+  }
+}

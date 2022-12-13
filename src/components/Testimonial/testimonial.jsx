@@ -18,7 +18,7 @@ const Testimonial = () => {
         {id:1, image: MozAppreciation, desc: "Received Appreciation letter from Mozilla India"},
     ]
     return(
-        <div className="testimonial-container">
+        <div className="testimonial-container" id='testimonial'>
             <h2>Testimonials</h2>
             <div className="carousel">
                 <Carousel autoPlay infiniteLoop stopOnHover useKeyboardArrows>

@@ -79,7 +79,7 @@ const Contact = ({onTriggerToast}) => {
       });
   };
   return (
-    <section className="form-container">
+    <section className="form-container" id="contact">
       <h2 className="form-title">Write to me</h2>
       <form onSubmit={(e) => sendMessage(e)} className="form-container">
         <label>Your Name</label>

@@ -52,7 +52,7 @@ export default function WorkHistory() {
   ];
 
   return (
-    <div className="work-container">
+    <div className="work-container" id="work-history">
       <h2>Work History</h2>
       {workHistory.map((work) => (
         <div className="work-card" key={work.id}>

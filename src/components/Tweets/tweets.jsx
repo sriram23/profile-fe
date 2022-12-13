@@ -11,7 +11,7 @@ const Tweets = () => {
         }).catch(err => console.error("Something went wrong: ", err))
     }, [])
     return(
-    <div className="tweet-section">
+    <div className="tweet-section" id='tweets'>
         <h2>Tweets</h2>
         {
             tweets.map(tweet => (

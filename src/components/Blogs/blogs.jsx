@@ -14,7 +14,7 @@ export default function Blogs() {
     })
   }
   return (
-    <section className="blogs-section">
+    <section className="blogs-section" id="blog">
       <h2>Blogs</h2>
       <div className="blog-container">
           {blogs && blogs.map(blog => (

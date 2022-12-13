@@ -33,6 +33,7 @@ body {
 }
 .toaster-hide {
   opacity: 0;
+  display: none;
 }
 .toast-container {
   flex: 0.5;
