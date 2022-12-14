@@ -3,7 +3,7 @@ import "./header.scss";
 
 export default function Header() {
   const [isScrolled, setScrolled] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(false)
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
