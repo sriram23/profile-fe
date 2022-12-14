@@ -7,20 +7,23 @@ $header-color: #4285f4;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   height: 7rem;
   transition: height 2s;
+  a {
+    text-decoration: none;
+  }
   .header-icon {
     font-family: 'Reggae One', cursive;
     color: $header-color;
     background: white;
     border-radius: 50%;
     padding: 1rem;
-    margin: 1rem;
+    margin: 0.5rem;
     transition: all 1s;
   }
   .header-title {
     font-family: 'Exo 2', sans-serif;
     font-size: 3rem;
     line-height: 2rem;
-    margin: 2rem;
+    margin: 1rem;
     color: white;
     transition: all 1s;
   }
@@ -41,12 +44,12 @@ $header-color: #4285f4;
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   a {
     text-decoration: none;
     color: #ffffff;
     height: 2rem;
     line-height: 2rem;
-    // border: 2px solid red;
     margin: 0.25rem;
     padding: 0.25rem;
     border-radius: 0.25rem;
@@ -54,5 +57,70 @@ $header-color: #4285f4;
       color: #4285f4;
       background: #ffffff;
     }
+  }
+}
+.hamburger-menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  .ham-button {
+    margin: 1rem;
+    border: unset;
+    color: #ffffff;
+    background-color: #4285f4;
+    opacity: 1;
+    transition: all 1s;
+    font-size: 2rem;
+    animation: fadein 0.25s;
+    &:hover {
+      background-color: #ffffff;
+      color: #4285f4;
+    }
+    &:active {
+      animation: fadeout 0.25s;
+      opacity: 0;
+    }
+  }
+  .ham-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    background: white;
+    a {
+      text-decoration: none;
+      color: #4285f4;
+      padding: 0.5rem 0.25rem;
+      border: 0.2px solid #4285f4;
+      transition: all 0.5s;
+      &:hover {
+        color: #ffffff;
+        background: #4285f4;
+      }
+    }
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
