@@ -23,6 +23,8 @@ India. I have experience in developing Web and Hybrid Mobile Applications. My
 expertise lies within front-end web/mobile apps, and the main
 languages/frameworks in my tech stack are JavaScript, React, React
 Native, Vue.js, and of course HTML/CSS." />
+        <meta name="keywords" content="Sriram, Sriram Balasubramanian, Coimbatore, Software Engineer, React, Frontend, UI, Developer, Dude who code"></meta>
+        <meta name="author" content="Sriram Balasubramanian"></meta>
         <title>Sriram Balasubramanian - Software Engineer</title>
       </Helmet>
       <div className="header">
