@@ -26,7 +26,7 @@ export default function Profile() {
   return (
     <div className="profile-container">
       <figure className="profile-image">
-        <img src={image} alt="Profile Image" />
+        <img src={image} alt="Profile" />
       </figure>
       <div className="profile-text-container">
         <h1>Sriram Balasubramanian</h1>
@@ -39,7 +39,7 @@ export default function Profile() {
         </p>
       </div>
       <div className="bg-img">
-        <img src={image_bw} alt="image background" />
+        <img src={image_bw} alt="background" />
       </div>
     </div>
   );

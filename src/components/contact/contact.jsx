@@ -74,8 +74,7 @@ const Contact = ({onTriggerToast}) => {
         setMessageClass(initialClass);
       })
       .catch((err) => {
-        setToastMessage("Something went wrong: "+ err)
-        setToastIcon('\u274c')
+        onTriggerToast("Something went wrong: "+ err)
       });
   };
   return (

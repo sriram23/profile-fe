@@ -1,5 +1,4 @@
 import React from "react";
-import { FaHeart } from "react-icons/fa";
 import "./footer.scss";
 const socialLinks = [
   {
@@ -45,7 +44,7 @@ export default function Footer() {
       <h2>Let's Connect</h2>
       <div className="social-section">
         {socialLinks.map((media) => (
-          <a className="social-card" href={media.link} target="_blank">
+          <a className="social-card" href={media.link} target="_blank" rel="noreferrer">
             <figure className="social-image">
               <img src={media.imageLink} alt={media.name} />
             </figure>

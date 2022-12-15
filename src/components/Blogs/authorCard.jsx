@@ -8,7 +8,7 @@ const AuthorCard = ({author, time, src}) => (
 <div className="author-card">
     <div className="author-section">
         <figure className="author-image">
-            <img src={DP} alt="Author Image" />
+            <img src={DP} alt="Author Avatar" />
         </figure>
         <span className="author-name">{author}</span>
         <span className="seperator">{'\u25CF'}</span>

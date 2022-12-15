@@ -17,7 +17,7 @@ const TweetCard = ({tweet}) => {
             res && res.data && res.data.data && setAuthorHandle(res.data.data.username)
             res && res.data && res.data.data && setAuthorName(res.data.data.name)
         }).catch(err => console.error("Something went wrong: ", err))
-    }, [])
+    }, [authorHandle])
     useEffect(() => {
         const split = tweet.text && tweet.text.split(" ");
         if(split[0] === "RT") {

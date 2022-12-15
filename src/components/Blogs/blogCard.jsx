@@ -7,10 +7,10 @@ const BlogCard = ({ blog, src }) => {
     // Splitting with ' " ' since the links are inside  " "
     const links = text && text.split("\"")
     // Checking for image extension inside the string
-    return links && links.length && links.find(txt => txt.includes(".png") || txt.includes(".jpg") || txt.includes(".svg") || txt.includes(".jpeg") || txt.includes(".gif")) || null;
+    return links && links.length && (links.find(txt => txt.includes(".png") || txt.includes(".jpg") || txt.includes(".svg") || txt.includes(".jpeg") || txt.includes(".gif")) || null);
   }
   return(
-  <a href={blog.link} className="blog-card" target="_blank">
+  <a href={blog.link} className="blog-card" target="_blank" rel="noreferrer">
     <AuthorCard
       author={blog.creator}
       time={blog.isoDate}
