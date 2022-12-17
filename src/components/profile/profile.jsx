@@ -4,6 +4,7 @@ import "./profile.scss";
 import image from "../../assets/sriram_normal.jpg";
 import image_bw from "../../assets/sriram_bnw.jpg";
 import { FaMapMarker } from "react-icons/fa";
+import PreloadImage from "react-preload-image"
 export default function Profile() {
   const intro = [
     "Software Engineer",
@@ -25,8 +26,8 @@ export default function Profile() {
   };
   return (
     <div className="profile-container">
-      <figure className="profile-image">
-        <img src={image} alt="Profile" />
+      <figure>
+        <PreloadImage className="profile-image" src={image} lazy/>
       </figure>
       <div className="profile-text-container">
         <h1>Sriram Balasubramanian</h1>
@@ -39,7 +40,7 @@ export default function Profile() {
         </p>
       </div>
       <div className="bg-img">
-        <img src={image_bw} alt="background" />
+        <PreloadImage src={image_bw} />
       </div>
     </div>
   );

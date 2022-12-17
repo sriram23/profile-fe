@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.scss";
+import PreloadImage from "react-preload-image"
 const socialLinks = [
   {
     name: "Facebook",
@@ -45,8 +46,8 @@ export default function Footer() {
       <div className="social-section">
         {socialLinks.map((media) => (
           <a className="social-card" href={media.link} target="_blank" rel="noreferrer">
-            <figure className="social-image">
-              <img src={media.imageLink} alt={media.name} />
+            <figure>
+              <PreloadImage className="social-image" src={media.imageLink} lazy/>
             </figure>
             <div className="social-title">
               <h3>{media.name}</h3>

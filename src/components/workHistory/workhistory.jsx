@@ -3,6 +3,8 @@ import Dell from "../../assets/dell_tech.png";
 import Squash from "../../assets/squash.png";
 import Ugam from "../../assets/ugam.jpg";
 import "./workhistory.scss";
+
+import PreloadImage from "react-preload-image"
 export default function WorkHistory() {
   const workHistory = [
     {
@@ -56,8 +58,8 @@ export default function WorkHistory() {
       <h2>Work History</h2>
       {workHistory.map((work) => (
         <div className="work-card" key={work.id}>
-          <figure className="firm-logo">
-            <img src={work.image} alt={work.firm} />
+          <figure>
+            <PreloadImage  className="firm-logo" src={work.image} alt={work.firm} lazy/>
           </figure>
           <p className="firm">{work.firm}</p>
           {work.designations.map((designation) => (

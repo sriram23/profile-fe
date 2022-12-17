@@ -38,9 +38,11 @@
       text-align: center;
     }
     .firm-logo {
-      max-width: 10rem;
-      img {
-        width: 100%;
+      position: relative;
+      width: 10rem;
+      height: 10rem;
+      div {
+        background-size: contain !important;
       }
     }
 }

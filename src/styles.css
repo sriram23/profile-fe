@@ -51,6 +51,10 @@ body {
   margin: 1rem;
   cursor: pointer;
 }
+
+figure {
+  margin: unset;
+}
 @media screen and (max-width: 587px) {
   .content-section {
     display: flex;

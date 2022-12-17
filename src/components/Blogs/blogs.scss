@@ -46,9 +46,10 @@
         }
       }
       .thumbnail {
-        width: 100%;
+        position: relative;
+        width: 20rem;
         height: 10rem;
-        img {
+        div {
           width:100%;
           height: 100%;
         }
@@ -112,13 +113,15 @@
     align-items: center;
     padding: 0.5rem 0;
     .author-image {
+      position: relative;
       width: 2rem;
+      height: 2rem;
       margin: unset;
       border: 0.25rem solid #ffffff;
       border-radius: 50%;
       margin-right: 1rem;
-      img {
-        width: 100%;
+      // Found this via inspect
+      div{
         border-radius: 50%;
       }
     }
@@ -132,12 +135,12 @@
     }
   }
   .blog-icon {
-    max-width: 2rem;
-    padding: 0.2rem;
-    margin: unset;
+    position: relative;
+    width: 3rem;
+    height: 3rem;
     background: #ffffff;
-    img {
-      width: 100%;
+    div {
+      margin: 0.2rem;
     }
   }
   .time {

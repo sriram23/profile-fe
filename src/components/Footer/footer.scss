@@ -29,12 +29,11 @@
     height: 2rem;
     color: black;
     .social-image {
+      position: relative;
       margin: 0.5rem;
       padding: unset;
-      max-width: 2rem;
-      img {
-        width: 100%;
-      }
+      width: 2rem;
+      height: 2rem;
       .social-title {
         flex: 1;
       }

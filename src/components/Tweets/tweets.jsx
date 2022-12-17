@@ -6,7 +6,6 @@ const Tweets = () => {
     const [tweets, setTweets] = useState([])
     useEffect(() => {
         callApi.get('/tweets').then(tw => {
-            console.log("Tweets: ", tw)
             tw.data && tw.data.data && setTweets(tw.data.data)
         }).catch(err => console.error("Something went wrong: ", err))
     }, [])

@@ -3,6 +3,15 @@
     flex-direction: column;
     background: #4285f4;
     border-top: 2px solid #ffffff;
+    .carousel-image {
+        position: relative;
+        margin: auto;
+        width: 90vw;
+        height: 80vh;
+        div {
+            background-size: contain !important;
+        }
+    }
     h2 {
         text-align: center;
         color: #ffffff;

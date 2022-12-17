@@ -7,6 +7,7 @@ import MozWebCompat from "../../assets/testimonials/mozilla-web-compat.png"
 import MozWebsite from "../../assets/testimonials/mozilla-website.png"
 import MozSpotlight from "../../assets/testimonials/spotlight.png"
 import SquashAward from "../../assets/testimonials/quickest-fe-er.png"
+import PreloadImage from "react-preload-image"
 
 const Testimonial = () => {
     const testimonials = [
@@ -24,8 +25,8 @@ const Testimonial = () => {
                 <Carousel autoPlay infiniteLoop stopOnHover useKeyboardArrows>
                     {testimonials.map(tm => (
                         <div key={TextMetrics.id}>
-                            <figure className="carousel-image">
-                                <img src={tm.image} alt=""/>
+                            <figure>
+                                <PreloadImage className="carousel-image" src={tm.image} alt={TextMetrics.id} lazy/>
                             </figure>
                             <p className="legend">{tm.desc}</p>
                         </div>
