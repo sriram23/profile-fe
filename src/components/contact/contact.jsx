@@ -81,8 +81,9 @@ const Contact = ({onTriggerToast}) => {
     <section className="form-container" id="contact">
       <h2 className="form-title">Write to me</h2>
       <form onSubmit={(e) => sendMessage(e)} className="form-container">
-        <label>Your Name</label>
+        <label htmlFor="name">Your Name</label>
         <input
+          id="name"
           type={"text"}
           aria-label="Your Name"
           value={payload.sender}
@@ -90,8 +91,9 @@ const Contact = ({onTriggerToast}) => {
           className={senderClass}
         ></input>
 
-        <label>Your Email</label>
+        <label htmlFor="email">Your Email</label>
         <input
+          id="email"
           type={"email"}
           aria-label="Your Email"
           value={payload.email}
@@ -99,8 +101,9 @@ const Contact = ({onTriggerToast}) => {
           className={emailClass}
         ></input>
 
-        <label>Type in your message</label>
+        <label htmlFor="message">Type in your message</label>
         <textarea
+          id="message"
           rows={8}
           value={payload.message}
           onChange={(e) => setMessage(e.target.value)}
