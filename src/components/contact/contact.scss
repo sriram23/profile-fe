@@ -1,15 +1,20 @@
-.form-container {
+@import "../../scss/colors.scss";
+@import "../../scss/mixin.scss";
+.form-section-light, .form-section-dark {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 1rem;
         padding: 1rem;
         width: 40rem;
         height: 30rem;
-        background: #4285f4;
-        color: #ffffff;
+        background: $primary-color;
+        color: $white;
         border-radius: 1rem;
         box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
         @media screen and (max-width: 587px) {
@@ -30,7 +35,7 @@
                 box-shadow: 0rem 0rem 1rem 0 rgba(0,255,0,0.8);
             }
             &:focus {
-                outline: 2px solid #4285f4;
+                outline: 2px solid $primary-color;
                 border: none;
             }
         }
@@ -41,8 +46,8 @@
             margin: 1rem;
             padding: 1rem;
             border-radius: 0.5rem;
-            color: #4285f4;
-            background: #ffffff;
+            color: $primary-color;
+            background: $white;
             cursor: pointer;
             &:disabled {
                 background-color: #CAD5E2;
@@ -53,4 +58,18 @@
             }
         }
     }
+}
+.form-section-dark {
+    .form-container {
+        label {
+            color: $black;
+        }
+        .form-input {
+            background: $black;
+            color: $white;
+        }
+        .send-button {
+            background: $black;
+        }
+    } 
 }

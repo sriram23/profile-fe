@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import callApi from "../axios/axios";
 import "./contact.scss";
+import { ThemeContext } from "../../Context/ThemeContext";
 const Contact = ({onTriggerToast}) => {
+  const {theme} = useContext(ThemeContext)
   const EMAIL_REGEX =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   const payloadInitial = {
@@ -78,7 +80,7 @@ const Contact = ({onTriggerToast}) => {
       });
   };
   return (
-    <section className="form-container" id="contact">
+    <section className={"form-section-"+theme} id="contact">
       <h2 className="form-title">Write to me</h2>
       <form onSubmit={(e) => sendMessage(e)} className="form-container">
         <label htmlFor="name">Your Name</label>
