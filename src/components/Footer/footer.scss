@@ -1,12 +1,14 @@
-.footer-container {
-  background: #4285f4;
+@import "../../scss/colors.scss";
+@import "../../scss/mixin.scss";
+.footer-container-light, .footer-container-dark {
+  background: $primary-color;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  border-top: 2px solid white;
+  color: $white;
+  border-top: 2px solid $white;
   .social-section{
     display: flex;
     flex-wrap: wrap;
@@ -16,8 +18,8 @@
      flex-direction: column;   
     }
   .social-card {
-    border: .25rem solid #4285f4;
-    background: white;
+    border: .25rem solid $primary-color;
+    background: $white;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -27,7 +29,7 @@
     padding: 1rem;
     text-decoration: none;
     height: 2rem;
-    color: black;
+    color: $black;
     .social-image {
       position: relative;
       margin: 0.5rem;
@@ -50,4 +52,14 @@
 
 .heart {
   color: red;
+}
+
+.footer-container-dark {
+  @include theme-color($light-theme: true);
+  border-top: 2px solid $black;
+  .social-section{
+    .social-card {
+      @include theme($light-theme: false);
+    }
+  }
 }

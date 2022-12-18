@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./footer.scss";
 import PreloadImage from "react-preload-image"
+import { ThemeContext } from "../../Context/ThemeContext";
 const socialLinks = [
   {
     name: "Facebook",
@@ -40,8 +41,9 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const {theme} = useContext(ThemeContext);
   return (
-    <footer className="footer-container">
+    <footer className={"footer-container-"+theme}>
       <h2>Let's Connect</h2>
       <div className="social-section">
         {socialLinks.map((media) => (
