@@ -1,6 +1,5 @@
 @import "../../scss/mixin.scss";
 @import "../../scss/colors.scss";
-// $header-color: $primary-color;
 
 .header-container-light, .header-container-dark {
   display: flex;
@@ -105,6 +104,22 @@
     a {
       @include theme-color ($light-theme: true);
       border: 2px solid $black;
+    }
+  }
+  .hamburger-menu {
+    .ham-button {
+      @include theme-color ($light-theme: true);
+      &:hover {
+        @include theme-background ($light-theme: false);
+      }
+    }
+    .ham-menu {
+      @include theme-background ($light-theme: false);
+      a {
+        &:hover {
+          @include theme-color ($light-theme: true);
+        }
+      }
     }
   }
 }
