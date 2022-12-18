@@ -95,7 +95,6 @@
   }
 }
 .header-container-dark {
-  // @include theme ($light-theme: false);
   .header-icon {
     @include theme-background ($light-theme: false);
   }
