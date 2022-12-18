@@ -48,6 +48,7 @@ const toggleTheme = () => {
           <a href="#blog">Blogs</a>
           <a href="#tweets">Tweets</a>
           <a href="#contact">Contact</a>
+          <span onClick={toggleTheme}>{theme === 'light'?"\u263d":"\u2600" }</span>
         </nav>) :
         <div className="hamburger-menu">
           <button className="ham-button" onClick={() => setShowMenu(!showMenu)}>{showMenu? '\u2a2f' : '\u2630'}</button>
@@ -58,12 +59,13 @@ const toggleTheme = () => {
             <a href="#blog">Blogs</a>
             <a href="#tweets">Tweets</a>
             <a href="#contact">Contact</a>
+            <span onClick={toggleTheme}>{theme === 'light'?"\u263d Dark Theme":"\u2600 Light Theme" }</span>
           </div>}
         </div>
       }
-      <div>
-        <button onClick={toggleTheme}>{theme === 'light'?"Dark":"Light" }</button>
-      </div>
+      {/* <div className="theme-container">
+        <button onClick={toggleTheme}>{theme === 'light'?"\u263d":"\u2600" }</button>
+      </div> */}
     </header>
   );
 }
