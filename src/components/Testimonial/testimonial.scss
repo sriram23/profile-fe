@@ -1,8 +1,10 @@
-.testimonial-container {
+@import "../../scss/mixin.scss";
+@import "../../scss/colors.scss";
+.testimonial-container-light, .testimonial-container-dark {
     display: flex;
     flex-direction: column;
-    background: #4285f4;
-    border-top: 2px solid #ffffff;
+    background: $primary-color;
+    border-top: 2px solid $white;
     .carousel-image {
         position: relative;
         margin: auto;
@@ -14,7 +16,13 @@
     }
     h2 {
         text-align: center;
-        color: #ffffff;
+        color: $white;
     }
     min-height: 90vh;
+}
+.testimonial-container-dark {
+    border-top: 2px solid $black;
+    h2 {
+        @include theme-color($light-theme: true)
+    }
 }

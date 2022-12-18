@@ -8,8 +8,11 @@ import MozWebsite from "../../assets/testimonials/mozilla-website.png"
 import MozSpotlight from "../../assets/testimonials/spotlight.png"
 import SquashAward from "../../assets/testimonials/quickest-fe-er.png"
 import PreloadImage from "react-preload-image"
+import { ThemeContext } from '../../Context/ThemeContext';
+import { useContext } from 'react';
 
 const Testimonial = () => {
+    const {theme} = useContext(ThemeContext)
     const testimonials = [
         {id:6, image: SquashAward, desc: "Awarded as \"Quickest Front-End Engineer\" by Squash Apps on September 2020"},
         {id:2, image: MozDojo, desc: "My contributions published in Mozilla TN Blog"},
@@ -19,7 +22,7 @@ const Testimonial = () => {
         {id:1, image: MozAppreciation, desc: "Received Appreciation letter from Mozilla India"},
     ]
     return(
-        <div className="testimonial-container" id='testimonial'>
+        <div className={"testimonial-container-"+theme} id='testimonial'>
             <h2>Testimonials</h2>
             <div className="carousel">
                 <Carousel autoPlay infiniteLoop stopOnHover useKeyboardArrows>
