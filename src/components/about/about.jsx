@@ -1,7 +1,10 @@
 import './about.scss'
+import {ThemeContext} from "../../Context/ThemeContext"
+import { useContext } from 'react';
 const About = () => {
+  const {theme} = useContext(ThemeContext)
   return (
-    <main className='about-container' id="about">
+    <main className={'about-container-'+theme} id="about">
       <article className='about-text-section'>
       <h2>About Me</h2>  
       <p className="about-text">

@@ -1,11 +1,13 @@
-.about-container {
+@import "../../scss/mixin.scss";
+@import "../../scss/colors.scss";
+.about-container-light, .about-container-dark {
   min-height: 90vh;
-  background: #4285f4;
+  background: $primary-color;
   padding: 1rem;
   display: flex;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid $white;
   .about-text-section {
-    background: #ffffff;
+    background: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,5 +16,11 @@
     .about-text {
       font-size: 1.25rem;
     }
+  }
+}
+
+.about-container-dark {
+  .about-text-section {
+    @include theme ($light-theme: false);
   }
 }
