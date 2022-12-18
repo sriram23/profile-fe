@@ -3,7 +3,10 @@ import "./blogs.scss";
 import CategoryChip from "./categoryChip";
 import PreloadImage from "react-preload-image";
 import PLACEHOLDER from "../../assets/placeholder.jpg";
+import { ThemeContext } from "../../Context/ThemeContext";
+import { useContext } from "react";
 const BlogCard = ({ blog, src }) => {
+  const  {theme} = useContext(ThemeContext)
   const splitImage = (text) => {
     // Splitting with ' " ' since the links are inside  " "
     const links = text && text.split('"');
@@ -23,7 +26,7 @@ const BlogCard = ({ blog, src }) => {
     );
   };
   return (
-    <a href={blog.link} className="blog-card" target="_blank" rel="noreferrer">
+    <a href={blog.link} className={"blog-card-"+theme} target="_blank" rel="noreferrer">
       <AuthorCard
         author={blog.creator}
         time={blog.isoDate}

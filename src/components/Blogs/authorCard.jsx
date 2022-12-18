@@ -13,7 +13,7 @@ const AuthorCard = ({author, time, src}) => (
         </figure>
         <span className="author-name">{author}</span>
         <span className="seperator">{'\u25CF'}</span>
-        <span className="time">{MONTH[moment(time).month()]} {moment(time).year()}</span>
+        <span className="time">{MONTH[moment(time).month()]} {moment(time).date()}, {moment(time).year()}</span>
     </div>
     <figure>
     <PreloadImage src={src==='medium'? MEDIUM : HASH_NODE} alt="Blog Logo" className="blog-icon" lazy/>
