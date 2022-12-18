@@ -10,13 +10,16 @@ import Testimonial from "./components/Testimonial/testimonial";
 import Contact from "./components/contact/contact";
 import { useState } from "react";
 import {Helmet} from "react-helmet"
+import { ThemeContext } from "./Context/ThemeContext";
 
 export default function App() {
   const [toastMessage, setToastMessage] = useState("")
   const [showToast, setShowToast] = useState(false)
+  const [theme, setTheme] = useState('light')
   const TOAST_CLOSE_ICON = '\u274c'
   return (
-    <div className="main-container">
+    <div className={"main-container-" + theme}>
+      <ThemeContext.Provider value={{theme, setTheme}}>
       <Helmet>
         <meta name="description" content="Hey! My name is Sriram. I am a Software Engineer based in Coimbatore,
 India. I have experience in developing Web and Hybrid Mobile Applications. My
@@ -56,6 +59,7 @@ Native, Vue.js, and of course HTML/CSS." />
           </div>
           </div>
         </div>
+      </ThemeContext.Provider>
     </div>
   );
 }

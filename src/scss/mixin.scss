@@ -1,0 +1,26 @@
+@import "./colors.scss";
+@mixin theme ($light-theme: true) {
+    @if $light-theme {
+        background: lighten($color: $white, $amount: 100%);
+        color: darken($color: $black, $amount: 100%);
+    } @else {
+        background: darken($color: $black, $amount: 100%);
+        color: lighten($color: $white, $amount: 100%);
+    }
+}
+
+@mixin theme-background ($light-theme: true) {
+    @if $light-theme {
+        background: lighten($color: $white, $amount: 100%);
+    } @else {
+        background: darken($color: $black, $amount: 100%);
+    }
+}
+
+@mixin theme-color ($light-theme: true) {
+    @if $light-theme {
+        color: darken($color: $black, $amount: 100%);
+    } @else {
+        color: lighten($color: $white, $amount: 100%);
+    }
+}

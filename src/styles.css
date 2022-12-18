@@ -6,8 +6,12 @@ body {
 .App {
   border: 2px solid red;
 }
-.main-container {
+.main-container-light {
   position: relative;
+}
+.main-container-dark {
+  background: #000000;
+  color: #ffffff;
 }
 .header {
   width: 100%;

@@ -1,11 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./header.scss";
+import {ThemeContext} from "../../Context/ThemeContext"
 
 export default function Header() {
   const [isScrolled, setScrolled] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(false)
+  const {theme, setTheme} = useContext(ThemeContext)
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     window.addEventListener('resize', handleResize);
@@ -26,8 +28,16 @@ const handleResize = () => {
   const {innerWidth} = window;
   setScreenWidth(innerWidth);
 }
+
+const toggleTheme = () => {
+  if(theme === 'light') {
+    setTheme('dark')
+  } else if(theme === 'dark') {
+    setTheme('light')
+  }
+}
   return (
-    <header className={`header-container ${isScrolled && 'header-scrolled'}`}>
+    <header className={`header-container-${theme} ${isScrolled && 'header-scrolled'}`}>
       <a href="#"><h2 className="header-icon">SR</h2></a>
       <h2 className="header-title">Sriram</h2>
       {screenWidth >= 768 ? 
@@ -51,7 +61,9 @@ const handleResize = () => {
           </div>}
         </div>
       }
-      
+      <div>
+        <button onClick={toggleTheme}>{theme === 'light'?"Dark":"Light" }</button>
+      </div>
     </header>
   );
 }

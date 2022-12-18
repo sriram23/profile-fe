@@ -1,9 +1,11 @@
-$header-color: #4285f4;
+@import "../../scss/mixin.scss";
+@import "../../scss/colors.scss";
+// $header-color: $primary-color;
 
-.header-container {
+.header-container-light, .header-container-dark {
   display: flex;
   align-items: center;
-  background: $header-color;
+  background: $primary-color;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   height: 7rem;
   transition: height 2s;
@@ -12,8 +14,8 @@ $header-color: #4285f4;
   }
   .header-icon {
     font-family: 'Reggae One', cursive;
-    color: $header-color;
-    background: white;
+    color: $primary-color;
+    background: $white;
     border-radius: 50%;
     padding: 1rem;
     margin: 0.5rem;
@@ -24,8 +26,87 @@ $header-color: #4285f4;
     font-size: 3rem;
     line-height: 2rem;
     margin: 1rem;
-    color: white;
+    color: $white;
     transition: all 1s;
+  }
+  .nav-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+      color: $white;
+      height: 2rem;
+      line-height: 2rem;
+      margin: 0.25rem;
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      font-weight: bold;
+      border: 2px solid $white;
+      &:hover {
+        color: $primary-color;
+        background: $white;
+      }
+    }
+  }
+  .hamburger-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    .ham-button {
+      margin: 1rem;
+      border: unset;
+      color: $white;
+      background-color: $primary-color;
+      opacity: 1;
+      transition: all 1s;
+      font-size: 2rem;
+      animation: fadein 0.25s;
+      &:hover {
+        background-color: $white;
+        color: $primary-color;
+      }
+      &:active {
+        animation: fadeout 0.25s;
+        opacity: 0;
+      }
+    }
+    .ham-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 3.5rem;
+      right: 1rem;
+      background: $white;
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        padding: 0.5rem 0.25rem;
+        border: 0.2px solid $primary-color;
+        transition: all 0.5s;
+        &:hover {
+          color: $white;
+          background: $primary-color;
+        }
+      }
+    }
+  }
+}
+.header-container-dark {
+  // @include theme ($light-theme: false);
+  .header-icon {
+    @include theme-background ($light-theme: false);
+  }
+  .header-title {
+    @include theme-color ($light-theme: true);
+  }
+  .nav-menu {
+    a {
+      @include theme-color ($light-theme: true);
+      border: 2px solid $black;
+    }
   }
 }
 .header-scrolled {
@@ -40,68 +121,6 @@ $header-color: #4285f4;
   }
 }
 
-.nav-menu {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  a {
-    text-decoration: none;
-    color: #ffffff;
-    height: 2rem;
-    line-height: 2rem;
-    margin: 0.25rem;
-    padding: 0.25rem;
-    border-radius: 0.25rem;
-    &:hover {
-      color: #4285f4;
-      background: #ffffff;
-    }
-  }
-}
-.hamburger-menu {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  .ham-button {
-    margin: 1rem;
-    border: unset;
-    color: #ffffff;
-    background-color: #4285f4;
-    opacity: 1;
-    transition: all 1s;
-    font-size: 2rem;
-    animation: fadein 0.25s;
-    &:hover {
-      background-color: #ffffff;
-      color: #4285f4;
-    }
-    &:active {
-      animation: fadeout 0.25s;
-      opacity: 0;
-    }
-  }
-  .ham-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 3.5rem;
-    right: 1rem;
-    background: white;
-    a {
-      text-decoration: none;
-      color: #4285f4;
-      padding: 0.5rem 0.25rem;
-      border: 0.2px solid #4285f4;
-      transition: all 0.5s;
-      &:hover {
-        color: #ffffff;
-        background: #4285f4;
-      }
-    }
-  }
-}
 
 @keyframes fadeout {
   0% {

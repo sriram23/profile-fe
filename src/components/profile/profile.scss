@@ -1,6 +1,7 @@
+@import "../../scss/mixin.scss";
 $header-color: #4285f4;
 
-.profile-container {
+.profile-container-light, .profile-container-dark{
   position: relative;
   display: flex;
   min-height: 95vh;
@@ -49,6 +50,10 @@ $header-color: #4285f4;
   .marker {
     color: $header-color;
   }
+}
+
+.profile-container-dark {
+  @include theme ($light-theme: false);
 }
 
 .bg-img {

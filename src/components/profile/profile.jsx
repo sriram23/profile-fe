@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import Typewriter from "typewriter-effect";
 import "./profile.scss";
 import image from "../../assets/sriram_normal.jpg";
 import image_bw from "../../assets/sriram_bnw.jpg";
 import { FaMapMarker } from "react-icons/fa";
 import PreloadImage from "react-preload-image"
+import { ThemeContext } from "../../Context/ThemeContext";
 export default function Profile() {
   const intro = [
     "Software Engineer",
@@ -13,6 +14,7 @@ export default function Profile() {
     "Dude who code",
     "I work with React, React Native & Vue.js",
   ];
+  const {theme} = useContext(ThemeContext)
   const renderTyperWriter = () => {
     return (
       <Typewriter
@@ -25,7 +27,7 @@ export default function Profile() {
     );
   };
   return (
-    <div className="profile-container">
+    <div className={"profile-container-"+ theme}>
       <figure>
         <PreloadImage className="profile-image" src={image} lazy/>
       </figure>
