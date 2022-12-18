@@ -1,4 +1,6 @@
-.work-container {
+@import "../../scss/mixin.scss";
+@import "../../scss/colors.scss";
+.work-container-light, .work-container-dark {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -9,46 +11,60 @@
   h2 {
     color: white;
   }
-}
-.work-card {
-  border: .25rem solid #4285f4;
-  background: white;
-  z-index: 2;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-    margin: 1rem;
-    width: 25rem;
-    @media screen and (max-width: 587px) {
-      width: 75vw;
-    }
-    padding: 1rem;
-    .firm {
-      font-weight: 700;
-      font-size: 1.25rem;
-    }
-    .designation {
-      font-size: 1rem;
-      color: rgba(0,0,0,.6);
-    }
-    .period {
-      font-size: .75rem;
-      text-align: center;
-    }
-    .firm-logo {
-      position: relative;
-      width: 10rem;
-      height: 10rem;
-      div {
-        background-size: contain !important;
+  .work-card {
+    border: .25rem solid #4285f4;
+    background: white;
+    z-index: 2;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+      margin: 1rem;
+      width: 25rem;
+      @media screen and (max-width: 587px) {
+        width: 75vw;
       }
-    }
+      padding: 1rem;
+      .firm {
+        font-weight: 700;
+        font-size: 1.25rem;
+      }
+      .designation {
+        font-size: 1rem;
+        color: rgba(0,0,0,.6);
+      }
+      .period {
+        font-size: .75rem;
+        text-align: center;
+      }
+      .firm-logo {
+        position: relative;
+        width: 10rem;
+        height: 10rem;
+        div {
+          background-size: contain !important;
+        }
+      }
+  }
+  #dash {
+    top: 10rem;
+    position: absolute;
+    border: 5px double white;
+    height: 50rem;
+  }
 }
-#dash {
-  top: 10rem;
-  position: absolute;
-  border: 5px double white;
-  height: 50rem;
+.work-container-dark {
+  h2 {
+    @include theme-color($light-theme: true);
+  }
+  .work-card {
+    @include theme ($light-theme: false);
+    .designation {
+      color: rgba(255,255,255,.6);
+    }
+  }
+  #dash {
+    border: 5px double $black
+  }
 }

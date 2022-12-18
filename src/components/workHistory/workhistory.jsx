@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Dell from "../../assets/dell_tech.png";
 import Squash from "../../assets/squash.png";
 import Ugam from "../../assets/ugam.jpg";
 import "./workhistory.scss";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 import PreloadImage from "react-preload-image"
 export default function WorkHistory() {
+  const {theme} = useContext(ThemeContext)
   const workHistory = [
     {
       id: 1,
@@ -54,7 +56,7 @@ export default function WorkHistory() {
   ];
 
   return (
-    <div className="work-container" id="work-history">
+    <div className={"work-container-"+theme} id="work-history">
       <h2>Work History</h2>
       {workHistory.map((work) => (
         <div className="work-card" key={work.id}>

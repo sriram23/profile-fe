@@ -20,6 +20,7 @@
 }
 
 .about-container-dark {
+  border-bottom: 2px solid $black;
   .about-text-section {
     @include theme ($light-theme: false);
   }
