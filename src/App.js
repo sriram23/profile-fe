@@ -8,15 +8,19 @@ import About from "./components/about/about"
 import "./styles.css";
 import Testimonial from "./components/Testimonial/testimonial";
 import Contact from "./components/contact/contact";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {Helmet} from "react-helmet"
 import { ThemeContext } from "./Context/ThemeContext";
 
 export default function App() {
   const [toastMessage, setToastMessage] = useState("")
   const [showToast, setShowToast] = useState(false)
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState()
   const TOAST_CLOSE_ICON = '\u274c'
+  useEffect(()=> {
+    const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    setTheme(isDarkTheme.matches ? 'dark' : 'light')
+  }, [])
   return (
     <div className={"main-container-" + theme}>
       <ThemeContext.Provider value={{theme, setTheme}}>
