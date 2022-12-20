@@ -39,21 +39,41 @@ Native, Vue.js, and of course HTML/CSS."
           ></meta>
           <meta name="author" content="Sriram Balasubramanian"></meta>
 
-          <meta property="og:title" content="Sriram Balasubramanian"></meta>
-          <meta property="og:site_name" content="sriram-23.web.app"></meta>
-          <meta property="og:url" content="https://sriram-23.web.app"></meta>
+          {/*  Facebook Meta Tags */}
+          <meta property="og:url" content="https://sriram-23.web.app" />
+          <meta
+            property="og:title"
+            content="Sriram Balasubramanian - Software Engineer"
+          />
           <meta
             property="og:description"
-            content="Hey! My name is Sriram. I am a Software Engineer based in Coimbatore, India. I started my journey as a Market Research Analyst and worked in the position for 1.5 years. Later I choose to switch to Engineering Role. I started as a Junior Front End Engineer in a startup and currently working as Software Engineer 2 at Dell Technologies.
-
-        I have experience in developing Web and Hybrid Mobile Applications. My expertise lies within front-end web/mobile apps, and the main languages/frameworks in my tech stack are JavaScript, React, React Native, Vue.js, and of course HTML/CSS. I’m currently on my path to becoming a Pythonista (One who works with Python language)."
-          ></meta>
-          <meta property="og:type" content="profile"></meta>
+            content="Hey! My name is Sriram. I am a Software Engineer based in Coimbatore,
+India. My
+expertise lies within front-end web/mobile apps."
+          />
           <meta
             property="og:image"
-            content="https://hashnode.com/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1608475350705%2F-UFZ5HmDp.jpeg%3Fw%3D500%26h%3D500%26fit%3Dcrop%26crop%3Dfaces%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75"
+            content="https://drive.google.com/uc?id=1KFYTLo4GkUMQwH3M4JS-Hpqd157tzcuT"
+          />
+
+          {/*  Twitter Meta Tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="twitter:domain" content="sriram-23.web.app" />
+          <meta property="twitter:url" content="https://sriram-23.web.app" />
+          <meta
+            name="twitter:title"
+            content="Sriram Balasubramanian - Software Engineer"
+          />
+          <meta
+            name="twitter:description"
+            content="Hey! My name is Sriram. I am a Software Engineer based in Coimbatore,
+India. My
+expertise lies within front-end web/mobile apps."
+          />
+          <meta
+            name="twitter:image"
+            content="https://drive.google.com/uc?id=1KFYTLo4GkUMQwH3M4JS-Hpqd157tzcuT"
           ></meta>
-          <meta property="og:image" content=""></meta>
 
           <title>Sriram Balasubramanian - Software Engineer</title>
         </Helmet>
