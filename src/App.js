@@ -10,7 +10,6 @@ import Testimonial from "./components/Testimonial/testimonial";
 import Contact from "./components/contact/contact";
 import { useEffect, useState } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
-import HeaderTag from "./components/headTags/headTags";
 
 export default function App() {
   const [toastMessage, setToastMessage] = useState("");
@@ -24,7 +23,6 @@ export default function App() {
   return (
     <div className={"main-container-" + theme}>
       <ThemeContext.Provider value={{ theme, setTheme }}>
-        <HeaderTag/>
         <div className="header">
           <Header />
         </div>
