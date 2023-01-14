@@ -17,13 +17,18 @@ export default function Blogs() {
     <section className="blogs-section" id="blog">
       <h2>Blogs</h2>
       <div className="blog-container">
-          {blogs && blogs.map(blog => (
+          {blogs && blogs.length && blogs.map(blog => (
             <BlogCard blog={blog} src={blog.medium}></BlogCard>
           ))}
       </div>
+      <div style={{color: "red"}}>
+        {(!blogs || !blogs.length) && 
+        <div>Something is wrong with blog API!</div>
+        }
+      </div>
       <div className="blog-button-container">
-        <span className="medium-button"><a href="https://medium.com/@sriram23"><button>Check more in Medium</button></a></span>
-        <span className="hashnode-button"><a href="https://sriram23.hashnode.dev"><button>Check more in Hashnode</button></a></span>
+        <span className="medium-button"><a href="https://medium.com/@sriram23"><button>Read my blogs in Medium</button></a></span>
+        <span className="hashnode-button"><a href="https://sriram23.hashnode.dev"><button>Read my blogs in Hashnode</button></a></span>
       </div>
     </section>
   );

@@ -76,7 +76,7 @@ const Contact = ({onTriggerToast}) => {
         setMessageClass(initialClass);
       })
       .catch((err) => {
-        onTriggerToast("Something went wrong: "+ err)
+        onTriggerToast("Something went wrong: "+ JSON.stringify(err))
       });
   };
   return (

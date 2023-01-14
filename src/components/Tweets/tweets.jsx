@@ -15,10 +15,13 @@ const Tweets = () => {
     <div className={"tweet-section-"+theme} id='tweets'>
         <h2>Tweets</h2>
         {
-            tweets.map(tweet => (
+            tweets && tweets.map(tweet => (
                 <TweetCard tweet={tweet}/>
             ))
         }
+        {(!tweets || !tweets.length) && <div style={{color: "red"}}>
+            Something went wrong while fetching tweets!
+            </div>}
         <a href='https://twitter.com/imsriramb'><button className='twitter-button'>Check more tweets on twitter</button></a>
     </div>
 )}
