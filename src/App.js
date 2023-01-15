@@ -10,6 +10,12 @@ import Testimonial from "./components/Testimonial/testimonial";
 import Contact from "./components/contact/contact";
 import { useEffect, useState } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
+
+const hashnodeClient = new ApolloClient({
+  uri: "https://api.hashnode.com"
+})
 
 export default function App() {
   const [toastMessage, setToastMessage] = useState("");
@@ -21,6 +27,7 @@ export default function App() {
     setTheme(isDarkTheme.matches ? "dark" : "light");
   }, []);
   return (
+    <ApolloProvider client={hashnodeClient}>
     <div className={"main-container-" + theme}>
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <div className="header">
@@ -55,5 +62,6 @@ export default function App() {
         </div>
       </ThemeContext.Provider>
     </div>
+    </ApolloProvider>
   );
 }
