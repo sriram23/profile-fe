@@ -5,7 +5,8 @@ import PreloadImage from "react-preload-image";
 import PLACEHOLDER from "../../assets/placeholder.jpg";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { useContext } from "react";
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from "rehype-raw";
 const BlogCard = ({ blog, avatar, pub }) => {
   const  {theme} = useContext(ThemeContext)
   return (
@@ -35,7 +36,7 @@ const BlogCard = ({ blog, avatar, pub }) => {
         )}
       </figure>
       <span>
-          <ReactMarkdown>{blog.contentMarkdown.slice(0, 250)+"..."}</ReactMarkdown>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{blog.contentMarkdown.slice(0, 250)+"..."}</ReactMarkdown>
       </span>
       {/* Commenting now. May be used in future */}
       {/* <span className="category-section">
