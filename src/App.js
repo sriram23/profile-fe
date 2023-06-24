@@ -34,10 +34,11 @@ export default function App() {
           <Header />
         </div>
         <Profile />
-        <About />
+        {/** Commenting this temporarily  */}
+        {/* <About /> */}
+        <Blogs />
         <WorkHistory />
         <Testimonial />
-        <Blogs />
         {/** Temporarily Commenting this as the twitter api aren't working  **/}
         {/* <Tweets /> */}
         <Contact

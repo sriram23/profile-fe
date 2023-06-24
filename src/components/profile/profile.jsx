@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect";
 import "./profile.scss";
 import image from "../../assets/sriram_normal.jpg";
 import image_bw from "../../assets/sriram_bnw.jpg";
+import banner from "../../assets/banner.png"
 import { FaMapMarker } from "react-icons/fa";
 import PreloadImage from "react-preload-image"
 import { ThemeContext } from "../../Context/ThemeContext";
@@ -42,7 +43,7 @@ export default function Profile() {
         </p>
       </div>
       <div className="bg-img">
-        <PreloadImage src={image_bw} />
+        <PreloadImage src={banner} />
       </div>
     </div>
   );

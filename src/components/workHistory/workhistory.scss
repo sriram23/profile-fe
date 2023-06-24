@@ -58,7 +58,7 @@
 }
 .work-container-dark {
   h2 {
-    @include theme-color($light-theme: true);
+    @include theme-color($light-theme: false);
   }
   .work-card {
     @include theme ($light-theme: false);

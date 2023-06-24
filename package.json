@@ -65,6 +65,7 @@
     "react-preload-image": "^1.0.7",
     "react-refresh": "^0.8.3",
     "react-responsive-carousel": "^3.2.23",
+    "react-switch": "^7.0.0",
     "react-twitter-embed": "^4.0.4",
     "rehype-raw": "^6.1.1",
     "resolve": "1.18.1",

@@ -55,7 +55,7 @@
 }
 
 .footer-container-dark {
-  @include theme-color($light-theme: true);
+  @include theme-color($light-theme: false);
   border-top: 2px solid $black;
   .social-section{
     .social-card {
