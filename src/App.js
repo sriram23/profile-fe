@@ -38,7 +38,8 @@ export default function App() {
         <WorkHistory />
         <Testimonial />
         <Blogs />
-        <Tweets />
+        {/** Temporarily Commenting this as the twitter api aren't working  **/}
+        {/* <Tweets /> */}
         <Contact
           onTriggerToast={(msg) => {
             setToastMessage(msg);
