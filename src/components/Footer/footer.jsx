@@ -11,9 +11,9 @@ const socialLinks = [
   },
   {
     name: "Twitter",
-    link: "https://twitter.com/imSriramB",
+    link: "https://x.com/imSriramB",
     imageLink:
-      "https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/en/brand-toolkit/brand-download-img-1.jpg.twimg.2560.jpg"
+      "https://static.toiimg.com/thumb/msid-102075304,imgsize-5578,width-400,resizemode-4/102075304.jpg"
   },
   {
     name: "Github",
@@ -44,7 +44,7 @@ export default function Footer() {
   const {theme} = useContext(ThemeContext);
   return (
     <footer className={"footer-container-"+theme}>
-      <h2>Let's Connect</h2>
+      <h2>Social Links</h2>
       <div className="social-section">
         {socialLinks.map((media) => (
           <a className="social-card" href={media.link} target="_blank" rel="noreferrer">
@@ -65,6 +65,8 @@ export default function Footer() {
         </span>{" "}
         in React
       </p> */}
+      {/**  Below copyright text needs to be checked */}
+      <p>{"\u00A9 2023 - Sriram Balasubramanian"}</p>
     </footer>
   );
 }

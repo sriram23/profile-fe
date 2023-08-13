@@ -38,7 +38,8 @@ export default function App() {
         {/* <About /> */}
         <Blogs />
         <WorkHistory />
-        <Testimonial />
+        {/** This is an experimental section and hence commented */}
+        {/* <Testimonial /> */}
         {/** Temporarily Commenting this as the twitter api aren't working  **/}
         {/* <Tweets /> */}
         <Contact

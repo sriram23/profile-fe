@@ -5,9 +5,9 @@ import Ugam from "../../assets/ugam.jpg";
 import "./workhistory.scss";
 import { ThemeContext } from "../../Context/ThemeContext";
 
-import PreloadImage from "react-preload-image"
+import PreloadImage from "react-preload-image";
 export default function WorkHistory() {
-  const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
   const workHistory = [
     {
       id: 1,
@@ -16,14 +16,25 @@ export default function WorkHistory() {
       designations: [
         {
           title: "Software Engineer II",
-          period: "September 2022 - Present"
+          period: "September 2022 - Present",
         },
         {
           title: "Software Engineer I",
-          period: "July 2021 - September 2022"
-        }
+          period: "July 2021 - September 2022",
+        },
       ],
-      image: Dell
+      techStacks: [
+        "React JS",
+        "Graphql",
+        "Typescript",
+        "Python",
+        "Flask",
+        "CSS",
+        "Docker",
+        "Kubernetes",
+        "Bash",
+      ],
+      image: Dell,
     },
     {
       id: 2,
@@ -32,10 +43,11 @@ export default function WorkHistory() {
       designations: [
         {
           title: "Junior Software Engineer",
-          period: "November 2019 - May 2021"
-        }
+          period: "November 2019 - May 2021",
+        },
       ],
-      image: Squash
+      techStacks: ["React JS", "React Native", "Vue", "Nuxt"],
+      image: Squash,
     },
     {
       id: 3,
@@ -44,24 +56,30 @@ export default function WorkHistory() {
       designations: [
         {
           title: "Analyst - Research Operations",
-          period: "May 2019 - Oct 2019"
+          period: "May 2019 - Oct 2019",
         },
         {
           title: "Associate Analyst - Research Operations",
-          period: "May 2018 - May 2019"
-        }
+          period: "May 2018 - May 2019",
+        },
       ],
-      image: Ugam
-    }
+      techStacks: ["Excel", "SPSS", "ASKIA"],
+      image: Ugam,
+    },
   ];
 
   return (
-    <div className={"work-container-"+theme} id="work-history">
-      <h2>Work History</h2>
+    <div className={"work-container-" + theme} id="work-history">
+      <h2>Experience</h2>
       {workHistory.map((work) => (
         <div className="work-card" key={work.id}>
           <figure>
-            <PreloadImage  className="firm-logo" src={work.image} alt={work.firm} lazy/>
+            <PreloadImage
+              className="firm-logo"
+              src={work.image}
+              alt={work.firm}
+              lazy
+            />
           </figure>
           <p className="firm">{work.firm}</p>
           {work.designations.map((designation) => (
@@ -70,6 +88,13 @@ export default function WorkHistory() {
               <p className="period">{designation.period}</p>
             </div>
           ))}
+          <div className="tech-container">
+            {work.techStacks.map((techStack, key) => (
+              <div key={key} className="tech">
+                {techStack}
+              </div>
+            ))}
+          </div>
         </div>
       ))}
       <span id="dash"></span>

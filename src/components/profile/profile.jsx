@@ -9,11 +9,7 @@ import PreloadImage from "react-preload-image"
 import { ThemeContext } from "../../Context/ThemeContext";
 export default function Profile() {
   const intro = [
-    "Software Engineer",
-    "Fan of JS",
-    "UI Developer",
-    "Dude who code",
-    "I work with React, React Native & Vue.js",
+    "React", "React Native", "Vue", "JavaScript", "Typescript", "Kubernetes", "Python"
   ];
   const {theme} = useContext(ThemeContext)
   const renderTyperWriter = () => {
@@ -34,12 +30,13 @@ export default function Profile() {
       </figure>
       <div className="profile-text-container">
         <h1>Sriram Balasubramanian</h1>
-        <h2>{renderTyperWriter()}</h2>
+        <h2>Software Engineer</h2>
+        <h2>I work with &nbsp;{renderTyperWriter()}</h2>
         <p>
           <span className="marker">
             <FaMapMarker />
           </span>
-          &nbsp;Coimbatore, India
+          &nbsp;Coimbatore, TN, India
         </p>
       </div>
       <div className="bg-img">
