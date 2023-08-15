@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { ThemeContext } from "./Context/ThemeContext";
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+import Project from "./components/projects/project";
 
 const hashnodeClient = new ApolloClient({
   uri: "https://api.hashnode.com"
@@ -37,6 +38,7 @@ export default function App() {
         {/** Commenting this temporarily  */}
         {/* <About /> */}
         <Blogs />
+        <Project/>
         <WorkHistory />
         {/** This is an experimental section and hence commented */}
         {/* <Testimonial /> */}
