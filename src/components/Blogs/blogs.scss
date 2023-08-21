@@ -37,7 +37,7 @@
         padding: 0.25rem 0.5rem;
         margin: 0.25rem;
         text-align: center;
-        background: $primary-color;
+        background: $primary-gradient;
         color: $white;
         height: 1.5rem;
         $white-space: nowrap;
@@ -98,7 +98,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: $primary-color;
+        background: $primary-gradient;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
         
         .author-section {
           display: flex;

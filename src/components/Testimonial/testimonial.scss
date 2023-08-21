@@ -3,7 +3,7 @@
 .testimonial-container-light, .testimonial-container-dark {
     display: flex;
     flex-direction: column;
-    background: $primary-color;
+    background: $primary-gradient;
     border-top: 2px solid $white;
     .carousel-image {
         position: relative;
