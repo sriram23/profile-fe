@@ -23,7 +23,6 @@
         flex-wrap: wrap;
         max-width: 40rem;
         max-height: 50rem;
-        border: 0.25rem solid $primary-color;
         border-radius: 1rem;
         margin: 1rem;
         box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -31,8 +30,8 @@
             color: $white;
             background: $primary-gradient;
             width: 100%;
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
             text-align: center;
         }
         .project-gif {
@@ -47,8 +46,8 @@
             width: 100%;
             justify-content: flex-end;
             background: $primary-gradient;
-            border-bottom-left-radius: 0.5rem;
-            border-bottom-right-radius: 0.5rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
             a{
                 text-decoration: none;
                 .link, .github-link {
