@@ -21,11 +21,17 @@ const Project = () => {
             link: "https://sriram23.github.io/vanilla-keyboard/",
             githubLink: "https://github.com/sriram23/vanilla-keyboard",
             readmeLink: "https://raw.githubusercontent.com/sriram23/vanilla-keyboard/main/README.md"
+        },
+        {
+            title: "Markdown Editor",
+            link: "https://md-editor.web.app/",
+            githubLink: "https://github.com/sriram23/md-editor",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/md-editor/main/README.md"
         }
     ]
     return (
         <section className="projects">
-            <h2>Projects</h2>
+            <h2 className="project-section-heading">Projects</h2>
             <div className="project-container">
                 {PROJECTS.map(project => {
                     return (
