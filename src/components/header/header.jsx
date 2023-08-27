@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./header.scss";
 import { ThemeContext } from "../../Context/ThemeContext";
 import Switch from "react-switch";
-import logoVideo from "../../assets/logo.mp4"
+import logoVideo from "../../assets/logo.mp4";
 
 export default function Header() {
   const [isScrolled, setScrolled] = useState(false);
@@ -50,15 +50,14 @@ export default function Header() {
           Your browser does not support the video tag.
         </video>
         </div> */}
+        <h2 className="header-title">Sriram</h2>
       </a>
-      <h2 className="header-title">Sriram</h2>
       {screenWidth >= 768 ? (
         <nav className="nav-menu">
-          <a href="#about">About</a>
-          <a href="#work-history">Work History</a>
-          <a href="#testimonial">Testimonials</a>
+          <a href="#">About</a>
           <a href="#blog">Blogs</a>
-          <a href="#tweets">Tweets</a>
+          <a href="#projects">Projects</a>
+          <a href="#work-history">Experience</a>
           <a href="#contact">Contact</a>
           {/* <span onClick={toggleTheme}>{theme === 'light'?"\u263d":"\u2600" }</span> */}
           <div className="theme-container">
@@ -89,11 +88,10 @@ export default function Header() {
           </button>
           {showMenu && (
             <div className="ham-menu">
-              <a href="#about">About</a>
-              <a href="#work-history">Work History</a>
-              <a href="#testimonial">Testimonials</a>
+              <a href="#">About</a>
               <a href="#blog">Blogs</a>
-              <a href="#tweets">Tweets</a>
+              <a href="#projects">Projects</a>
+              <a href="#work-history">Experience</a>
               <a href="#contact">Contact</a>
               <span onClick={toggleTheme}>
                 {theme === "light" ? "\u263d Dark Theme" : "\u2600 Light Theme"}

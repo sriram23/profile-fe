@@ -47,14 +47,12 @@
       padding: 0.25rem;
       border-radius: 0.25rem;
       font-weight: bold;
-      // border: 2px solid $white;
       &:hover {
         color: $primary-color;
         background: $white;
       }
     }
     span {
-      // border: 2px solid $black;
       color: $white;
       min-width: 2rem;
       text-align: center;
@@ -73,7 +71,7 @@
       margin: 1rem;
       border: unset;
       color: $white;
-      background-color: $primary-gradient;
+      background-color: transparent;
       opacity: 1;
       transition: all 1s;
       font-size: 2rem;
