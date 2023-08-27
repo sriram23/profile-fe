@@ -7,12 +7,20 @@ const Project = () => {
         {
             title: "CSS Clock",
             link: "https://sriram23.github.io/css-clock/",
-            githubLink: "https://github.com/sriram23/css-clock"
+            githubLink: "https://github.com/sriram23/css-clock",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/css-clock/master/README.md"
         },
         {
             title: "Weather Now",
             link: "https://weather-now-2.vercel.app/",
-            githubLink: "https://github.com/sriram23/weather-now-2.0"
+            githubLink: "https://github.com/sriram23/weather-now-2.0",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/weather-now-2.0/master/README.md"
+        }, 
+        {
+            title: "Vanilla Keyboard",
+            link: "https://sriram23.github.io/vanilla-keyboard/",
+            githubLink: "https://github.com/sriram23/vanilla-keyboard",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/vanilla-keyboard/main/README.md"
         }
     ]
     return (
@@ -21,7 +29,7 @@ const Project = () => {
             <div className="project-container">
                 {PROJECTS.map(project => {
                     return (
-                        <ProjectCard title={project.title} link={project.link} githubLink={project.githubLink}/>
+                        <ProjectCard title={project.title} link={project.link} githubLink={project.githubLink} readmeLink={project.readmeLink}/>
                     )
                 })}
             </div>
