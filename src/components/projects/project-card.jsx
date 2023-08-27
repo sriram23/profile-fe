@@ -29,13 +29,19 @@ const ProjectCard = ({ link, title, githubLink, readmeLink }) => {
       <div className="title">
         <h2 className="project-title">{title}</h2>
       </div>
-      <ReactMarkdown className="md-container" remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+      <ReactMarkdown
+        className="md-container"
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
+      >
         {markdownContent}
       </ReactMarkdown>
       <div className="link-container">
-        <a href={link} target="_blank" rel="noreferrer">
-          <div className="link">{"\uD83D\uDD17"}</div>
-        </a>
+        {link && (
+          <a href={link} target="_blank" rel="noreferrer">
+            <div className="link">{"\uD83D\uDD17"}</div>
+          </a>
+        )}
         <a href={githubLink} target="_blank" rel="noreferrer">
           <div className="github-link">
             <figure className="github-icon">

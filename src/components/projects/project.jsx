@@ -27,6 +27,24 @@ const Project = () => {
             link: "https://md-editor.web.app/",
             githubLink: "https://github.com/sriram23/md-editor",
             readmeLink: "https://raw.githubusercontent.com/sriram23/md-editor/main/README.md"
+        },
+        {
+            title: "Battery Tracker for Linux",
+            link: "https://medium.com/swlh/a-simple-battery-status-tracker-for-linux-using-python-4d90d68d7502",
+            githubLink: "https://github.com/sriram23/Battery-Tracker",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/Battery-Tracker/master/README.md"
+        },
+        {
+            title: "Insurance Claim Automation System",
+            link: "",
+            githubLink: "https://github.com/sriram23/Insurance-Claim-Automation-System",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/Insurance-Claim-Automation-System/master/README.md"
+        },
+        {
+            title: "Firefox Addons (Web Extensions)",
+            link: "https://addons.mozilla.org/en-US/firefox/user/12637768/",
+            githubLink: "https://github.com/sriram23/Web_Extensions",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/Web_Extensions/master/README.md"
         }
     ]
     return (
