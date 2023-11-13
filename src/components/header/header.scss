@@ -132,14 +132,15 @@
     @include theme-background ($light-theme: false);
   }
   .header-title {
-    @include theme-color ($light-theme: false);
+    @include theme-color ($light-theme: true);
   }
   .nav-menu {
     a {
-      @include theme-color ($light-theme: false);
+      @include theme-color ($light-theme: true);
       // border: 2px solid $black;
       &:hover {
-        @include theme-background ($light-theme: true);
+        @include theme-color ($light-theme: false);
+        @include theme-background ($light-theme: false);
       }
     }
     span {

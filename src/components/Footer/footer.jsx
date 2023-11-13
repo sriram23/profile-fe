@@ -25,7 +25,7 @@ const socialLinks = [
     name: "Medium",
     link: "https://medium.com/@sriram23",
     imageLink:
-      "https://seeklogo.com/images/M/medium-logo-93CDCF6451-seeklogo.com.png"
+      "https://miro.medium.com/v2/resize:fit:720/format:webp/1*psYl0y9DUzZWtHzFJLIvTw.png"
   },
   {
     name: "Hashnode",
@@ -37,6 +37,11 @@ const socialLinks = [
     name: "Linkedin",
     link: "https://linkedin.com/in/imsriramb",
     imageLink: "https://cdn-icons-png.flaticon.com/512/174/174857.png"
+  },
+  {
+    name: "Hacker Noon",
+    link: "https://hackernoon.com/u/sriram",
+    imageLink: "https://hackernoon.imgix.net/hn-icon.png"
   }
 ];
 
