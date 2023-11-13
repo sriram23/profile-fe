@@ -147,6 +147,7 @@
       box-shadow: 1rem 1rem 1rem 0 rgba(122, 82, 82, 0.6);
     }
     .blog-card-dark {
+      border: 0.5px solid $white;
       @include theme ($light-theme: false);
       .author-card {
         .author-section {

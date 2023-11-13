@@ -3,7 +3,8 @@ import React, { useContext, useEffect, useState } from "react";
 import "./header.scss";
 import { ThemeContext } from "../../Context/ThemeContext";
 import Switch from "react-switch";
-import logoVideo from "../../assets/logo.mp4";
+import SUN from "../../assets/sun.png"
+import MOON from "../../assets/half-moon.png"
 
 export default function Header() {
   const [isScrolled, setScrolled] = useState(false);
@@ -65,16 +66,16 @@ export default function Header() {
               onChange={toggleTheme}
               checked={theme === "light"}
               checkedHandleIcon={
-                <span className="toggle-icon" style={{ color: "#f3e16b" }}>
-                  {"\u2600"}
-                </span>
+                <figure className="toggle-icon" style={{ color: "#FF8008" }}>
+                  <img src={SUN} alt={"Sun - Light Mode"} />
+                </figure>
               }
               uncheckedHandleIcon={
-                <span className="toggle-icon" style={{ color: "#000" }}>
-                  {"\u263d"}
-                </span>
+                <figure className="toggle-icon" style={{ color: "#6c7a89", fontSize: "20px" }}>
+                  <img src={MOON} alt={"Moon - Dark Mode"} />
+                </figure>
               }
-              onColor="#f3e16b"
+              onColor="#FF8008"
               offColor="#6c7a89"
               checkedIcon={false}
               uncheckedIcon={false}
