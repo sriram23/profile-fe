@@ -13,6 +13,7 @@ import { ThemeContext } from "./Context/ThemeContext";
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import Project from "./components/projects/project";
+import "./i18n/i18n"
 
 const hashnodeClient = new ApolloClient({
   uri: "https://api.hashnode.com"

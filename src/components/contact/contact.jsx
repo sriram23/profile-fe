@@ -2,7 +2,9 @@ import { useContext, useState } from "react";
 import callApi from "../axios/axios";
 import "./contact.scss";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { useTranslation } from "react-i18next";
 const Contact = ({onTriggerToast}) => {
+  const {t} = useTranslation();
   const {theme} = useContext(ThemeContext)
   const EMAIL_REGEX =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -81,9 +83,9 @@ const Contact = ({onTriggerToast}) => {
   };
   return (
     <section className={"form-section-"+theme} id="contact">
-      <h2 className="form-title">Write to me</h2>
+      <h2 className="form-title">{t("Email.Contact")}</h2>
       <form onSubmit={(e) => sendMessage(e)} className="form-container">
-        <label htmlFor="name">Your Name</label>
+        <label htmlFor="name">{t("Email.Name")}</label>
         <input
           id="name"
           type={"text"}
@@ -93,7 +95,7 @@ const Contact = ({onTriggerToast}) => {
           className={senderClass}
         ></input>
 
-        <label htmlFor="email">Your Email</label>
+        <label htmlFor="email">{t("Email.Email")}</label>
         <input
           id="email"
           type={"email"}
@@ -103,7 +105,7 @@ const Contact = ({onTriggerToast}) => {
           className={emailClass}
         ></input>
 
-        <label htmlFor="message">Type in your message</label>
+        <label htmlFor="message">{t("Email.Message")}</label>
         <textarea
           id="message"
           rows={8}
@@ -113,7 +115,7 @@ const Contact = ({onTriggerToast}) => {
         ></textarea>
 
         <button type="submit" className="send-button" disabled={!canSend}>
-          Send Message
+          {t("Email.Send")}
         </button>
       </form>
     </section>

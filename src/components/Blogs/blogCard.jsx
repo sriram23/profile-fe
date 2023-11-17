@@ -7,7 +7,9 @@ import { ThemeContext } from "../../Context/ThemeContext";
 import { useContext } from "react";
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from "rehype-raw";
+import { useTranslation } from "react-i18next";
 const BlogCard = ({ blog, avatar, pub }) => {
+  const {t} = useTranslation()
   const  {theme} = useContext(ThemeContext)
   return (
     <div className={"blog-card-"+theme}>
@@ -49,7 +51,7 @@ const BlogCard = ({ blog, avatar, pub }) => {
         </span>
       </span> */}
       <div className={"read-more-container-"+theme}>
-        <button onClick={() => window.open("https://sriram23.hashnode.dev/"+blog.slug, "_blank")}>Read More →</button>
+        <button onClick={() => window.open("https://sriram23.hashnode.dev/"+blog.slug, "_blank")}>{t("ReadMore")} →</button>
       </div>
       </div>
   );

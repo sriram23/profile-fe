@@ -2,6 +2,7 @@ import "./blogs.scss";
 import BlogCard from "./blogCard";
 import {Query} from "react-apollo";
 import { gql } from "apollo-boost";
+import { useTranslation } from "react-i18next";
 
 const BLOGS = gql`
 query {
@@ -22,9 +23,10 @@ query {
 }
 `
 export default function Blogs() {
+    const {t} = useTranslation()
       return(
         <section className="blogs-section" id="blog">
-          <h2>Blogs</h2>
+          <h2>{t('Blogs')}</h2>
           <div className="blog-container">
       <Query query={BLOGS}>
         {
@@ -32,7 +34,6 @@ export default function Blogs() {
             if(loading) return <h1>Loading...</h1>
             if(error) return <h1>{JSON.stringify(error)}</h1>
             if(!loading && !error) {
-              console.log("Data: ", data)
               return (data && data.user && data.user.publication && data.user.publication.posts && data.user.publication.posts.map(blog => (
                 <BlogCard blog={blog} avatar={data.user.photo} pub={data.user.publication.title}/>
               )))
@@ -42,8 +43,8 @@ export default function Blogs() {
       </Query>
       </div>
       <div className="blog-button-container">
-        <span className="medium-button"><a href="https://medium.com/@sriram23"><button>Read my blogs in Medium</button></a></span>
-        <span className="hashnode-button"><a href="https://sriram23.hashnode.dev"><button>Read my blogs in Hashnode</button></a></span>
+        <span className="medium-button"><a href="https://medium.com/@sriram23"><button>{t("ReadMedium")}</button></a></span>
+        <span className="hashnode-button"><a href="https://sriram23.hashnode.dev"><button>{t("ReadHashnode")}</button></a></span>
       </div>
       </section>
       )

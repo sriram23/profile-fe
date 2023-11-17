@@ -1,0 +1,65 @@
+{
+    "Sriram": "Sriram",
+    "SriramBalasubramanian": "Sriram Balasubramanian",
+    "SoftwareEngineer": "Software Engineer",
+    "Address": "Coimbatore, TN, India",
+    "Blogs": "Blogs",
+    "About": "About",
+    "Projects":"Projects",
+    "Experience": "Experience",
+    "Contact": "Contact",
+    "ReadMedium": "Read my blogs on Medium",
+    "ReadHashnode": "Read my blogs on Hashnode",
+    "ReadMore": "Read More",
+    "CssClock": "CSS Clock",
+    "WeatherNow": "Weather Now",
+    "VanillaKeyboard": "Vanilla Keyboard",
+    "MarkdownEditor": "Markdown Editor",
+    "BatteryTracker": "Battery Tracker for Linux",
+    "InsuranceAutomation": "Insurance Claim Automation System",
+    "FirefoxAddons": "Firefox Addons (Web Extensions)",
+    "Company": {
+        "DellEMC": "Dell EMC",
+        "SquashApps": "Squash Apps",
+        "Ugam": "Ugam - A Merkle Company"
+    },
+    "Role": {
+        "SE2": "Software Engineer 2",
+        "SE1": "Software Engineer 1",
+        "JSE": "Junior Software Engineer",
+        "Analyst": "Analyst - Research Operations",
+        "AssociateAnalyst": "Associate Analyst - Research Operations"
+    },
+    "Month": {
+        "Jan": "Jan",
+        "Feb": "Feb",
+        "Mar": "Mar",
+        "Apr": "Apr",
+        "May": "May",
+        "Jun": "Jun",
+        "Jul": "Jul",
+        "Aug": "Aug",
+        "Sep": "Sep",
+        "Oct": "Oct",
+        "Nov": "Nov",
+        "Dec": "Dec",
+        "Present": "Present"
+    },
+    "Email": {
+        "Contact": "Contact",
+        "Name": "Your Name",
+        "Email": "Your Email",
+        "Message": "Type in your Message",
+        "Send": "Send Message"
+    },
+    "Social": {
+        "SocialLinks": "Social Links",
+        "FB": "Facebook",
+        "X": "Twitter",
+        "Github": "Github",
+        "Medium": "Medium",
+        "Hashnode": "Hashnode",
+        "Linkedin": "Linkedin",
+        "Hackernoon": "Hackernoon"
+    }
+}

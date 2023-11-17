@@ -7,7 +7,9 @@ import banner from "../../assets/banner.png";
 import { FaMapMarker } from "react-icons/fa";
 import PreloadImage from "react-preload-image";
 import { ThemeContext } from "../../Context/ThemeContext";
+import { useTranslation } from "react-i18next";
 export default function Profile() {
+  const {t} = useTranslation()
   const intro = [
     "React",
     "React Native",
@@ -36,14 +38,14 @@ export default function Profile() {
           <PreloadImage className="profile-image" src={image} lazy />
         </figure>
         <div>
-          <h1>Sriram Balasubramanian</h1>
-          <h2>Software Engineer</h2>
+          <h1>{t('SriramBalasubramanian')}</h1>
+          <h2>{t('SoftwareEngineer')}</h2>
           {/* <h2>I work with &nbsp;{renderTyperWriter()}</h2> */}
           <p>
             <span className="marker">
               <FaMapMarker />
             </span>
-            &nbsp;Coimbatore, TN, India
+            &nbsp;{t("Address")}
           </p>
         </div>
       </div>

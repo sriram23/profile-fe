@@ -1,0 +1,18 @@
+@import "../../scss/mixin.scss";
+@import "../../scss/colors.scss";
+.lang-switch {
+    button {
+        border: none;
+        color: $primary-color;
+        background-color: $white;
+        height: 2rem;
+        margin: 0.5rem;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+            color: $white;
+            background-color: $primary-color;
+        }
+    }
+}

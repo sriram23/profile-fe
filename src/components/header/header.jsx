@@ -5,8 +5,11 @@ import { ThemeContext } from "../../Context/ThemeContext";
 import Switch from "react-switch";
 import SUN from "../../assets/sun.png"
 import MOON from "../../assets/half-moon.png"
+import { useTranslation } from "react-i18next";
+import LanguageSwitch from "../languageSwitch/LanguageSwitch";
 
 export default function Header() {
+  const { t } = useTranslation();
   const [isScrolled, setScrolled] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(false);
@@ -51,15 +54,15 @@ export default function Header() {
           Your browser does not support the video tag.
         </video>
         </div> */}
-        <h2 className="header-title">Sriram</h2>
+        <h2 className="header-title">{t('Sriram')}</h2>
       </a>
-      {screenWidth >= 768 ? (
+      {screenWidth > 768 ? (
         <nav className="nav-menu">
-          <a href="#">About</a>
-          <a href="#blog">Blogs</a>
-          <a href="#projects">Projects</a>
-          <a href="#work-history">Experience</a>
-          <a href="#contact">Contact</a>
+          <a href="#">{t('About')}</a>
+          <a href="#blog">{t('Blogs')}</a>
+          <a href="#projects">{t('Projects')}</a>
+          <a href="#work-history">{t('Experience')}</a>
+          <a href="#contact">{t('Contact')}</a>
           {/* <span onClick={toggleTheme}>{theme === 'light'?"\u263d":"\u2600" }</span> */}
           <div className="theme-container">
             <Switch
@@ -81,6 +84,7 @@ export default function Header() {
               uncheckedIcon={false}
             />
           </div>
+          <LanguageSwitch/>
         </nav>
       ) : (
         <div className="hamburger-menu">
@@ -89,14 +93,15 @@ export default function Header() {
           </button>
           {showMenu && (
             <div className="ham-menu">
-              <a href="#">About</a>
-              <a href="#blog">Blogs</a>
-              <a href="#projects">Projects</a>
-              <a href="#work-history">Experience</a>
-              <a href="#contact">Contact</a>
+              <a href="#">{t('About')}</a>
+              <a href="#blog">{t('Blogs')}</a>
+              <a href="#projects">{t('Projects')}</a>
+              <a href="#work-history">{t('Experience')}</a>
+              <a href="#contact">{t('Contact')}</a>
               <span onClick={toggleTheme}>
                 {theme === "light" ? "\u263d Dark Theme" : "\u2600 Light Theme"}
               </span>
+              <LanguageSwitch/>
             </div>
           )}
         </div>
