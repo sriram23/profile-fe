@@ -19,6 +19,12 @@ const Project = () => {
             readmeLink: "https://raw.githubusercontent.com/sriram23/weather-now-2.0/master/README.md"
         }, 
         {
+            title: t("WeatherNow1"),
+            link: "https://sriram23.github.io/Weather-Now/",
+            githubLink: "https://github.com/sriram23/Weather-Now",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/Weather-Now/master/README.md"
+        }, 
+        {
             title: t("VanillaKeyboard"),
             link: "https://sriram23.github.io/vanilla-keyboard/",
             githubLink: "https://github.com/sriram23/vanilla-keyboard",
