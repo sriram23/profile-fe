@@ -16,7 +16,7 @@ import Project from "./components/projects/project";
 import "./i18n/i18n"
 
 const hashnodeClient = new ApolloClient({
-  uri: "https://api.hashnode.com"
+  uri: "https://gql.hashnode.com"
 })
 
 export default function App() {

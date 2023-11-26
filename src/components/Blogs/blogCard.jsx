@@ -16,16 +16,16 @@ const BlogCard = ({ blog, avatar, pub }) => {
       <AuthorCard
         author={pub}
         avatar={avatar}
-        time={blog.dateAdded}
+        time={blog.node.publishedAt}
         src={"hashnode"} // Hardcoding this for now. Will be removed in future
       ></AuthorCard>
-      <h3>{blog.title}</h3>
+      <h3>{blog.node.title}</h3>
       <figure>
-        {blog.coverImage ? (
+        {blog.node.coverImage.url ? (
           <PreloadImage
             className="thumbnail"
             src={
-              blog.coverImage
+              blog.node.coverImage.url
             }
             alt="Thumbnail"
           />
@@ -38,7 +38,7 @@ const BlogCard = ({ blog, avatar, pub }) => {
         )}
       </figure>
       <span>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{blog.contentMarkdown.slice(0, 250)+"..."}</ReactMarkdown>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{blog.node.content.markdown.slice(0, 250)+"..."}</ReactMarkdown>
       </span>
       {/* Commenting now. May be used in future */}
       {/* <span className="category-section">

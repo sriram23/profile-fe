@@ -6,21 +6,28 @@ import { useTranslation } from "react-i18next";
 
 const BLOGS = gql`
 query {
-	user(username:"sriram23") {
-    photo
-    publication{
+    publication(host:"sriram23.hashnode.dev"){
       title
-      posts(page: 0) {
-        title
-        popularity
-        dateAdded
-        coverImage
-        contentMarkdown
-        slug
+      author {
+        profilePicture
+      }
+      posts(first: 12) {
+        edges{
+          node {
+            title
+            publishedAt
+            coverImage {
+              url
+            }
+            content{
+              markdown
+            }
+            slug
+          }
+        }
       }
     }
   }
-}
 `
 export default function Blogs() {
     const {t} = useTranslation()
@@ -31,11 +38,12 @@ export default function Blogs() {
       <Query query={BLOGS}>
         {
           ({loading, error, data}) => {
+            console.log("Data: ", data)
             if(loading) return <h1>Loading...</h1>
             if(error) return <h1>{JSON.stringify(error)}</h1>
             if(!loading && !error) {
-              return (data && data.user && data.user.publication && data.user.publication.posts && data.user.publication.posts.map(blog => (
-                <BlogCard blog={blog} avatar={data.user.photo} pub={data.user.publication.title}/>
+              return (data && data.publication && data.publication.posts && data.publication.posts.edges && data.publication.posts.edges.map(blog => (
+                <BlogCard blog={blog} avatar={data.publication.author.profilePicture} pub={data.publication.title}/>
               )))
             }
           }
