@@ -2,7 +2,8 @@
 @import "../../scss/colors.scss";
 @import "../../scss/animation.scss";
 
-.profile-container-light, .profile-container-dark{
+.profile-container-light,
+.profile-container-dark {
   position: relative;
   display: flex;
   min-height: 95vh;
@@ -21,7 +22,7 @@
     padding: 1rem;
     border-radius: 1rem;
     opacity: 1;
-    background: rgba(255,255,255, 1);
+    background: rgba(255, 255, 255, 1);
     @media screen and (max-width: 1024px) {
       flex-direction: column;
     }
@@ -32,29 +33,39 @@
       flex-wrap: wrap;
     }
   }
- .profile-image {
-  margin: 1rem;;
-  animation-name: appear;
-  animation-duration: 4s;
-  position: relative;
+  .profile-image {
+    margin: 1rem;
+    animation-name: appear;
+    animation-duration: 4s;
+    position: relative;
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
-    border: .5rem solid rgba(66,133,244,.5333333333333333);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border: 0.5rem solid rgba(66, 133, 244, 0.5333333333333333);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    &:hover {
+      border-radius: 5px;
+      div {
+        border-radius: unset;
+      }
+    }
     div {
       width: 100%;
       border-radius: 50%;
     }
   }
   .profile-image:hover {
-    box-shadow: 1rem 1rem 1rem 0 rgba(0,0,0,0.6);
+    box-shadow: 1rem 1rem 1rem 0 rgba(0, 0, 0, 0.6);
   }
-  h1, h2, p {
-    font-family: 'Exo 2', sans-serif;
+  h1,
+  h2,
+  p {
+    font-family: "Exo 2", sans-serif;
   }
   h2 {
-    color: rgba(0,0,0,.5333333333333333);
+    color: rgba(0, 0, 0, 0.5333333333333333);
     font-size: 1.25rem;
     text-align: center;
   }
@@ -67,11 +78,11 @@
 }
 
 .profile-container-dark {
-  @include theme ($light-theme: false);
+  @include theme($light-theme: false);
   .profile-text-container {
-    background: rgba(0,0,0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     h2 {
-      @include theme-color ($light-theme: false)
+      @include theme-color($light-theme: false);
     }
   }
 }
@@ -81,7 +92,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  img{
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;

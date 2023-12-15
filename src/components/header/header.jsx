@@ -78,7 +78,7 @@ export default function Header() {
                   <img src={MOON} alt={"Moon - Dark Mode"} />
                 </figure>
               }
-              onColor="#FF8008"
+              onColor="#89CFF3"
               offColor="#6c7a89"
               checkedIcon={false}
               uncheckedIcon={false}

@@ -51,7 +51,7 @@ const BlogCard = ({ blog, avatar, pub }) => {
         </span>
       </span> */}
       <div className={"read-more-container-"+theme}>
-        <button onClick={() => window.open("https://sriram23.hashnode.dev/"+blog.slug, "_blank")}>{t("ReadMore")} →</button>
+        <button onClick={() => window.open("https://sriram23.hashnode.dev/"+blog.node.slug, "_blank")}>{t("ReadMore")} →</button>
       </div>
       </div>
   );
