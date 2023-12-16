@@ -8,7 +8,9 @@ import Prism from "prismjs";
 import remarkGfm from "remark-gfm";
 // rehypeRaw to accept html
 import rehypeRaw from "rehype-raw";
+import { useTranslation } from "react-i18next";
 const ProjectCard = ({ link, title, githubLink, readmeLink }) => {
+  const {t} = useTranslation()
   const [markdownContent, setMarkdownContent] = useState("");
   const GIF = title === "CSS Clock" ? CSS_CLOCK : WEATHER_NOW;
 
@@ -39,18 +41,20 @@ const ProjectCard = ({ link, title, githubLink, readmeLink }) => {
       <div className="link-container">
         {link && (
           <a href={link} target="_blank" rel="noreferrer">
-            <div className="link">{"\uD83D\uDD17"}</div>
+            {/* <div className="link">{"\uD83D\uDD17"}</div> */}
+            <button className="link">{t("Link")}</button>
           </a>
         )}
         <a href={githubLink} target="_blank" rel="noreferrer">
-          <div className="github-link">
+          {/* <div className="github-link">
             <figure className="github-icon">
               <img
                 src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
                 alt="Github"
               />
             </figure>
-          </div>
+          </div> */}
+          <button className="link">{t("Source")}</button>
         </a>
       </div>
     </div>

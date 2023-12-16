@@ -19,7 +19,7 @@ const AuthorCard = ({author, time, src, avatar, views, readTime}) => {
         <span className="time">{MONTH[moment(time).month()]} {moment(time).date()}, {moment(time).year()}</span>
         </div>
         <div className="stats">
-            <span className="stats">📈{views} {t("Views")}</span>
+            <span className="stats">📈 <b>{views}</b> {t("Views")}</span>
         </div>
     </div>
     {/* Commenting this for now, may be used in future */}
