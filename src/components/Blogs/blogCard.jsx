@@ -1,6 +1,6 @@
 import AuthorCard from "./authorCard";
 import "./blogs.scss";
-// import CategoryChip from "./categoryChip";
+import CategoryChip from "./categoryChip";
 import PreloadImage from "react-preload-image";
 import PLACEHOLDER from "../../assets/placeholder.jpg";
 import { ThemeContext } from "../../Context/ThemeContext";
@@ -17,11 +17,15 @@ const BlogCard = ({ blog, avatar, pub }) => {
         author={pub}
         avatar={avatar}
         time={blog.node.publishedAt}
-        src={"hashnode"} // Hardcoding this for now. Will be removed in future
+        src={"hashnode"}
+        views={blog.node.views}
+        readTime={blog.node.readTimeInMinutes}
+         // Hardcoding this for now. Will be removed in future
       ></AuthorCard>
-      <h3>{blog.node.title}</h3>
+      <h3 className="blog-title">{blog.node.title}</h3>
+      <h4 className="blog-subtitle">{blog.node.subtitle}</h4>
       <figure>
-        {blog.node.coverImage.url ? (
+        {blog.node.coverImage && blog.node.coverImage.url ? (
           <PreloadImage
             className="thumbnail"
             src={
@@ -40,18 +44,17 @@ const BlogCard = ({ blog, avatar, pub }) => {
       <span>
           <ReactMarkdown rehypePlugins={[rehypeRaw]}>{blog.node.content.markdown.slice(0, 250)+"..."}</ReactMarkdown>
       </span>
-      {/* Commenting now. May be used in future */}
-      {/* <span className="category-section">
-        {blog.categories && <strong>Categories:</strong>}{" "}
+      <span className="category-section">
+        {blog.node.tags && <strong>{t("Tags")}:</strong>}{" "}
         <span className="category-container">
-          {blog.categories &&
-            blog.categories.map((category) => (
-              <CategoryChip category={category}></CategoryChip>
+          {blog.node.tags &&
+            blog.node.tags.map((category) => (
+              <CategoryChip category={category.name}></CategoryChip>
             ))}
         </span>
-      </span> */}
+      </span>
       <div className={"read-more-container-"+theme}>
-        <button onClick={() => window.open("https://sriram23.hashnode.dev/"+blog.node.slug, "_blank")}>{t("ReadMore")} →</button>
+        <button onClick={() => window.open("https://sriram23.hashnode.dev/"+blog.node.slug, "_blank")}>{t("ReadMore")} {'\u2192'}</button>
       </div>
       </div>
   );

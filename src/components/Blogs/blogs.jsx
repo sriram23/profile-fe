@@ -15,6 +15,7 @@ query {
         edges{
           node {
             title
+            subtitle
             publishedAt
             coverImage {
               url
@@ -23,6 +24,11 @@ query {
               markdown
             }
             slug
+            tags {
+              name
+            }
+            readTimeInMinutes
+            views
           }
         }
       }
@@ -43,7 +49,7 @@ export default function Blogs() {
             if(error) return <h1>{JSON.stringify(error)}</h1>
             if(!loading && !error) {
               return (data && data.publication && data.publication.posts && data.publication.posts.edges && data.publication.posts.edges.map(blog => (
-                <BlogCard blog={blog} avatar={data.publication.author.profilePicture} pub={data.publication.title}/>
+                data.publication &&<BlogCard blog={blog} avatar={data.publication.author.profilePicture} pub={data.publication.title}/>
               )))
             }
           }
@@ -51,8 +57,8 @@ export default function Blogs() {
       </Query>
       </div>
       <div className="blog-button-container">
-        <span className="medium-button"><a href="https://medium.com/@sriram23"><button>{t("ReadMedium")}</button></a></span>
-        <span className="hashnode-button"><a href="https://sriram23.hashnode.dev"><button>{t("ReadHashnode")}</button></a></span>
+        {/* <span className="medium-button"><a href="https://medium.com/@sriram23"><button>{t("ReadMedium")}</button></a></span> */}
+        <span className="hashnode-button"><a href="https://sriram23.hashnode.dev/newsletter" target="_blank" rel="noreferrer"><button>{t("ReadHashnode")}</button></a></span>
       </div>
       </section>
       )

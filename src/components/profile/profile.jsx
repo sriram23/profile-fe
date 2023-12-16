@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
 import "./profile.scss";
 import image from "../../assets/sriram_new.png";
 import banner from "../../assets/banner.png";
@@ -9,15 +9,15 @@ import { ThemeContext } from "../../Context/ThemeContext";
 import { useTranslation } from "react-i18next";
 export default function Profile() {
   const {t} = useTranslation()
-  const intro = [
-    "React",
-    "React Native",
-    "Vue",
-    "JavaScript",
-    "Typescript",
-    "Kubernetes",
-    "Python",
-  ];
+  // const intro = [
+  //   "React",
+  //   "React Native",
+  //   "Vue",
+  //   "JavaScript",
+  //   "Typescript",
+  //   "Kubernetes",
+  //   "Python",
+  // ];
   const { theme } = useContext(ThemeContext);
   /** React Typewriter - Commented temporarily */
   // const renderTyperWriter = () => {
