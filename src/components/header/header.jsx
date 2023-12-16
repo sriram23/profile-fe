@@ -7,6 +7,7 @@ import SUN from "../../assets/sun.png"
 import MOON from "../../assets/half-moon.png"
 import { useTranslation } from "react-i18next";
 import LanguageSwitch from "../languageSwitch/LanguageSwitch";
+import PreloadImage from "react-preload-image"
 
 export default function Header() {
   const { t } = useTranslation();
@@ -70,12 +71,12 @@ export default function Header() {
               checked={theme === "light"}
               checkedHandleIcon={
                 <figure className="toggle-icon" style={{ color: "#FF8008" }}>
-                  <img src={SUN} alt={"Sun - Light Mode"} />
+                  <PreloadImage src={SUN} alt={"Sun - Light Mode"} lazy/>
                 </figure>
               }
               uncheckedHandleIcon={
                 <figure className="toggle-icon" style={{ color: "#6c7a89", fontSize: "20px" }}>
-                  <img src={MOON} alt={"Moon - Dark Mode"} />
+                  <PreloadImage src={MOON} alt={"Moon - Dark Mode"} lazy/>
                 </figure>
               }
               onColor="#89CFF3"
