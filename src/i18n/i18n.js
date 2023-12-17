@@ -13,10 +13,16 @@ const resources = {
     }
 }
 
+// Fetching the current language from local storage. Storing the current language in local storage to make refresh resistant.
+const currentLanguage = localStorage.getItem('language')
+if(!currentLanguage) {
+    localStorage.setItem('language', 'en')
+}
+
 i18n.use(initReactI18next).init({
     resources,
-    lng: 'en',
-    fallbackLng: 'en',
+    lng: currentLanguage,
+    fallbackLng: currentLanguage,
     interpolation: {
         escapeValue: false,
     }

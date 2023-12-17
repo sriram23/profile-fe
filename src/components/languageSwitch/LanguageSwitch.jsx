@@ -7,15 +7,17 @@ const LanguageSwitch = () => {
   console.log("Current language: ", i18n.language);
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    // The current language is stored in the local storage, to make the language switch refresh resistant.
+    localStorage.setItem("language", String(i18n.language));
   };
 
   const switchLanguageText =
-    i18n.language === "en" ? "தமிழில் பார்க்க" : "See in English";
+    localStorage.getItem('language') === "en" ? "தமிழில் பார்க்க" : "See in English";
 
   return (
     <div className="lang-switch">
       <button
-        onClick={() => changeLanguage(i18n.language === "en" ? "ta" : "en")}
+        onClick={() => changeLanguage(localStorage.getItem('language') === "en" ? "ta" : "en")}
       >
         {switchLanguageText}
       </button>
