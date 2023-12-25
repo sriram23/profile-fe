@@ -7,6 +7,12 @@ const Project = () => {
     const {t} = useTranslation()
     const PROJECTS = [
         {
+            title: t("SwiggyClone"),
+            link: "https://swiggy-clone-23.web.app/",
+            githubLink: "https://github.com/sriram23/swiggy-clone",
+            readmeLink: "https://raw.githubusercontent.com/sriram23/swiggy-clone/main/README.md"
+        },
+        {
             title: t("CssClock"),
             link: "https://sriram23.github.io/css-clock/",
             githubLink: "https://github.com/sriram23/css-clock",
