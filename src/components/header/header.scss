@@ -75,13 +75,13 @@
       opacity: 1;
       transition: all 1s;
       font-size: 2rem;
-      animation: fadein 0.25s;
+      // animation: fadein 0.25s;
       &:hover {
         background-color: $white;
         color: $primary-color;
       }
       &:active {
-        animation: fadeout 0.25s;
+        // animation: fadeout 0.25s;
         opacity: 0;
       }
     }
