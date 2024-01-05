@@ -27,7 +27,7 @@ const Testimonial = () => {
             <div className="carousel">
                 <Carousel autoPlay infiniteLoop stopOnHover useKeyboardArrows>
                     {testimonials.map(tm => (
-                        <div key={TextMetrics.id}>
+                        <div key={tm.id}>
                             <figure>
                                 <PreloadImage className="carousel-image" src={tm.image} alt={TextMetrics.id} lazy/>
                             </figure>

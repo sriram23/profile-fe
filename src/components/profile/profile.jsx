@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 // import Typewriter from "typewriter-effect";
 import "./profile.scss";
 import image from "../../assets/sriram_new.png";
-import banner from "../../assets/banner.png";
+// import banner from "../../assets/banner.png";
 import { FaMapMarker } from "react-icons/fa";
 import PreloadImage from "react-preload-image";
 import { ThemeContext } from "../../Context/ThemeContext";

@@ -17,10 +17,12 @@ export default function WorkHistory() {
       // period: "July 2021 - Present",
       designations: [
         {
+          id:1,
           title: t("Role.SE2"),
           period: t("Month.Sep")+" 2022 - "+t("Month.Present"),
         },
         {
+          id:2,
           title: t("Role.SE1"),
           period: t("Month.Jul")+" 2021 - "+t("Month.Sep")+" 2022",
         },
@@ -44,6 +46,7 @@ export default function WorkHistory() {
       // period: "November 2019 - May 2021",
       designations: [
         {
+          id:3,
           title: t("Role.JSE"),
           period: t("Month.Nov")+" 2019 - "+t("Month.May")+" 2021",
         },
@@ -57,10 +60,12 @@ export default function WorkHistory() {
       // period: "May 2018 - Oct 2019",
       designations: [
         {
+          id:4,
           title: t("Role.Analyst"),
           period: t("Month.May")+" 2019 - "+t("Month.Oct")+" 2019",
         },
         {
+          id:5,
           title: t("Role.AssociateAnalyst"),
           period: t("Month.May")+" 2018 - "+t("Month.May")+" 2019",
         },
@@ -85,7 +90,7 @@ export default function WorkHistory() {
           </figure>
           <p className="firm">{work.firm}</p>
           {work.designations.map((designation) => (
-            <div>
+            <div key={designation.id}>
               <p className="designation">{designation.title}</p>
               <p className="period">{designation.period}</p>
             </div>

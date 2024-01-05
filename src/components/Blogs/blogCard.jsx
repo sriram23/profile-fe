@@ -49,7 +49,7 @@ const BlogCard = ({ blog, avatar, pub }) => {
         <span className="category-container">
           {blog.node.tags &&
             blog.node.tags.map((category) => (
-              <CategoryChip category={category.name}></CategoryChip>
+              <CategoryChip key={category.name} category={category.name}></CategoryChip>
             ))}
         </span>
       </span>

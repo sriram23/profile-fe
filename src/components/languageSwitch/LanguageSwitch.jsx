@@ -4,7 +4,6 @@ import "./LanguageSwitch.scss"
 
 const LanguageSwitch = () => {
   const { i18n } = useTranslation();
-  console.log("Current language: ", i18n.language);
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     // The current language is stored in the local storage, to make the language switch refresh resistant.

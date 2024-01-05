@@ -44,12 +44,11 @@ export default function Blogs() {
       <Query query={BLOGS}>
         {
           ({loading, error, data}) => {
-            console.log("Data: ", data)
             if(loading) return <h1>Loading...</h1>
             if(error) return <h1>{JSON.stringify(error)}</h1>
             if(!loading && !error) {
-              return (data && data.publication && data.publication.posts && data.publication.posts.edges && data.publication.posts.edges.map(blog => (
-                data.publication &&<BlogCard blog={blog} avatar={data.publication.author.profilePicture} pub={data.publication.title}/>
+              return (data && data.publication && data.publication.posts && data.publication.posts.edges && data.publication.posts.edges.map((blog, id) => (
+                data.publication &&<BlogCard key={id} blog={blog} avatar={data.publication.author.profilePicture} pub={data.publication.title}/>
               )))
             }
           }
