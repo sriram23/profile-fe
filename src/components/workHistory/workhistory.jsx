@@ -14,7 +14,6 @@ export default function WorkHistory() {
     {
       id: 1,
       firm: t("Company.DellEMC"),
-      // period: "July 2021 - Present",
       designations: [
         {
           id:1,
@@ -43,7 +42,6 @@ export default function WorkHistory() {
     {
       id: 2,
       firm: t("Company.SquashApps"),
-      // period: "November 2019 - May 2021",
       designations: [
         {
           id:3,
@@ -57,7 +55,6 @@ export default function WorkHistory() {
     {
       id: 3,
       firm: t("Company.Ugam"),
-      // period: "May 2018 - Oct 2019",
       designations: [
         {
           id:4,

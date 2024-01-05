@@ -48,13 +48,6 @@ export default function Header() {
       className={`header-container-${theme} ${isScrolled && "header-scrolled"}`}
     >
       <a href="#">
-        {/* <h2 className="header-icon">SR</h2> */}
-        {/* <div className="header-icon">
-        <video autoPlay loop muted>
-          <source src={logoVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        </div> */}
         <h2 className="header-title">{t('Sriram')}</h2>
       </a>
       {screenWidth > 768 ? (
@@ -64,7 +57,6 @@ export default function Header() {
           <a href="#projects">{t('Projects')}</a>
           <a href="#work-history">{t('Experience')}</a>
           <a href="#contact">{t('Contact')}</a>
-          {/* <span onClick={toggleTheme}>{theme === 'light'?"\u263d":"\u2600" }</span> */}
           <div className="theme-container">
             <Switch
               onChange={toggleTheme}
@@ -107,9 +99,6 @@ export default function Header() {
           )}
         </div>
       )}
-      {/* <div className="theme-container">
-        <button onClick={toggleTheme}>{theme === 'light'?"\u263d":"\u2600" }</button>
-      </div> */}
     </header>
   );
 }

@@ -82,14 +82,6 @@ export default function Footer() {
           </a>
         ))}
       </div>
-      {/* TODO: Uncomment in future if required */}
-      {/* <p>
-        Made with{" "}
-        <span className="heart">
-          <FaHeart />
-        </span>{" "}
-        in React
-      </p> */}
       {/**  Below copyright text needs to be checked */}
       <p>
         <b>Icon Credits:</b>
@@ -107,7 +99,7 @@ export default function Footer() {
           </a>
         </li>
       </p>
-      <p>{"\u00A9 2023 - "+t("SriramBalasubramanian")}</p>
+      <p>{"\u00A9 2024 - "+t("SriramBalasubramanian")}</p>
     </footer>
   );
 }

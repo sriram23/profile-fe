@@ -56,7 +56,6 @@ export default function Blogs() {
       </Query>
       </div>
       <div className="blog-button-container">
-        {/* <span className="medium-button"><a href="https://medium.com/@sriram23"><button>{t("ReadMedium")}</button></a></span> */}
         <span className="hashnode-button"><a href="https://sriram23.hashnode.dev/newsletter" target="_blank" rel="noreferrer"><button>{t("ReadHashnode")}</button></a></span>
       </div>
       </section>

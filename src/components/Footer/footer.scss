@@ -14,9 +14,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    @media screen and (max-width: 587px) {
-     flex-direction: column;   
-    }
   .social-card {
     background: $white;
     border-radius: 1rem;
@@ -37,6 +34,15 @@
       height: 2rem;
       .social-title {
         flex: 1;
+      }
+    }
+  }
+  @media screen and (max-width: 425px){
+    .social-card {
+      padding: 0.25rem;
+      margin: 0.5rem;
+      .social-title {
+        display: none;
       }
     }
   }

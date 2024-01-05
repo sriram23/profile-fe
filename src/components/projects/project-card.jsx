@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-// import CSS_CLOCK from "../../assets/video/css_clock.gif";
-// import WEATHER_NOW from "../../assets/video/WeatherNow.gif";
 import ReactMarkdown from "react-markdown";
 // Prism for code keyword highlight
 import Prism from "prismjs";
@@ -12,7 +10,6 @@ import { useTranslation } from "react-i18next";
 const ProjectCard = ({ link, title, githubLink, readmeLink }) => {
   const {t} = useTranslation()
   const [markdownContent, setMarkdownContent] = useState("");
-  // const GIF = title === "CSS Clock" ? CSS_CLOCK : WEATHER_NOW;
 
   useEffect(() => {
     const githubRawUrl = readmeLink;
@@ -46,14 +43,6 @@ const ProjectCard = ({ link, title, githubLink, readmeLink }) => {
           </a>
         )}
         <a href={githubLink} target="_blank" rel="noreferrer">
-          {/* <div className="github-link">
-            <figure className="github-icon">
-              <img
-                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                alt="Github"
-              />
-            </figure>
-          </div> */}
           <button className="link">{t("Source")}</button>
         </a>
       </div>
