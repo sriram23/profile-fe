@@ -10,6 +10,17 @@ import LanguageSwitch from "../languageSwitch/LanguageSwitch";
 import PreloadImage from "react-preload-image"
 
 export default function Header() {
+  // Scroll function
+  const handleScrollToSection = (event) =>{
+    event.preventDefault();
+    const targetId = event.target.getAttribute('href')
+    const targetElement = document.getElementById(targetId.split("#")[1]);
+    targetElement.scrollIntoView({behavior: 'smooth'})
+  }
+  const scrollToTop = (event) => {
+    event.preventDefault()
+    window.scrollTo({top:0, behavior:"smooth"})
+  }
   const { t } = useTranslation();
   const [isScrolled, setScrolled] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -47,16 +58,16 @@ export default function Header() {
     <header
       className={`header-container-${theme} ${isScrolled && "header-scrolled"}`}
     >
-      <a href="#">
+      <a href="#about" onClick={scrollToTop}>
         <h2 className="header-title">{t('Sriram')}</h2>
       </a>
       {screenWidth > 768 ? (
         <nav className="nav-menu">
-          <a href="#">{t('About')}</a>
-          <a href="#blog">{t('Blogs')}</a>
-          <a href="#projects">{t('Projects')}</a>
-          <a href="#work-history">{t('Experience')}</a>
-          <a href="#contact">{t('Contact')}</a>
+          <a href="#about" onClick={handleScrollToSection}>{t('About')}</a>
+          <a href="#blog" onClick={handleScrollToSection}>{t('Blogs')}</a>
+          <a href="#projects" onClick={handleScrollToSection}>{t('Projects')}</a>
+          <a href="#work-history" onClick={handleScrollToSection}>{t('Experience')}</a>
+          <a href="#contact" onClick={handleScrollToSection}>{t('Contact')}</a>
           <div className="theme-container">
             <Switch
               onChange={toggleTheme}

@@ -11,7 +11,7 @@ export default function Profile() {
   const { t } = useTranslation();
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={"profile-container-" + theme}>
+    <div id="about" className={"profile-container-" + theme}>
       <div className="profile-text-container">
         <figure>
           <PreloadImage className="profile-image" src={image} lazy />

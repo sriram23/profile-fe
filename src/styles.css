@@ -2,6 +2,7 @@
 body {
   padding: unset;
   margin: unset;
+  scroll-behavior: smooth;
 }
 .App {
   border: 2px solid red;
