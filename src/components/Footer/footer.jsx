@@ -58,7 +58,7 @@ export default function Footer() {
     },
   ];
   return (
-    <footer className={"footer-container-" + theme}>
+    <footer id="social" className={"footer-container-" + theme}>
       <h2>{t("Social.SocialLinks")}</h2>
       <div className="social-section">
         {socialLinks.map((media) => (

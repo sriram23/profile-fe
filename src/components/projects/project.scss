@@ -6,7 +6,6 @@
     text-align: center;
   }
   min-height: 100vh;
-  padding: 1rem;
 }
 .project-container {
   display: flex;
@@ -20,7 +19,9 @@
     display: none;
   }
   @media screen and (max-width: 767px) {
-    margin: 0.2rem;
+    margin: 0.5rem;
+    flex-direction: column;
+    overflow-x: unset;
   }
   .project-card {
     display: flex;
@@ -39,19 +40,22 @@
       width: 20rem;
       height: 30rem;
       .title-container {
-        .project-title {
-          font-size: 1.5rem !important;
-          white-space: pre-wrap;
-        }
-        .project-description {
-          font-size: 1rem !important;
-          white-space: pre-wrap;
+        .text-container {
+          width: 100%;
+          .project-title {
+            font-size: 1.5rem !important;
+            white-space: pre-wrap;
+          }
+          .project-description {
+            font-size: 1rem !important;
+            white-space: pre-wrap;
+          }
         }
       }
       .image-container {
-        width: 20rem !important;
+        width: 100% !important;
         .project-image {
-          width: 20rem;
+          width: 10rem;
           height: 10rem;
         }
       }
@@ -62,13 +66,17 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      .project-title {
-        font-size: 2rem;
-        text-align: center;
-      }
-      .project-description {
-        font-size: 1.5rem;
-        white-space: pre-wrap;
+      .text-container {
+        width: 100%;
+        .project-title {
+          font-size: 1.25rem;
+          text-align: center;
+        }
+        .project-description {
+          font-size: 1.2rem;
+          text-align: center;
+          white-space: pre-wrap;
+        }
       }
       .link {
         border: unset;
@@ -109,5 +117,8 @@
   justify-content: center;
   .scroll-button {
     margin: 0.5rem;
+  }
+  @media screen and (max-width: 425px) {
+    display: none;
   }
 }

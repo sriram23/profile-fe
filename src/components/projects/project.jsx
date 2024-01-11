@@ -98,11 +98,11 @@ const Project = () => {
   ];
   const scrollLeft = () =>{
     const scrollElement = document.getElementById('project-container');
-    scrollElement.scrollLeft -= 500;
+    scrollElement.scrollLeft -= 745;
 }
 const scrollRight = () =>{
     const scrollElement = document.getElementById('project-container');
-    scrollElement.scrollLeft += 500;
+    scrollElement.scrollLeft += 745;
 }
   return (
     <section className="projects" id="projects">
