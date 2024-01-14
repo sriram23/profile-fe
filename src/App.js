@@ -14,6 +14,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import Project from "./components/projects/project";
 import "./i18n/i18n"
+import Splash from "./components/splash/splash";
 
 const hashnodeClient = new ApolloClient({
   uri: "https://gql.hashnode.com"
@@ -23,28 +24,30 @@ export default function App() {
   const [toastMessage, setToastMessage] = useState("");
   const [showToast, setShowToast] = useState(false);
   const [theme, setTheme] = useState();
+  const [showSplash, setShowSplash] = useState(true);
   const TOAST_CLOSE_ICON = "\u274c";
   useEffect(() => {
     const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
     setTheme(isDarkTheme.matches ? "dark" : "light");
   }, []);
+
+  useEffect(() => {
+    if(showSplash) {
+      setTimeout(() => setShowSplash(false), 2000)
+    }
+  }, [showSplash])
   return (
     <ApolloProvider client={hashnodeClient}>
     <div className={"main-container-" + theme}>
-      <ThemeContext.Provider value={{ theme, setTheme }}>
+      {showSplash && <Splash/>}
+      {!showSplash &&<ThemeContext.Provider value={{ theme, setTheme }}>
         <div className="header">
           <Header />
         </div>
         <Profile />
-        {/** Commenting this temporarily  */}
-        {/* <About /> */}
         <Blogs />
         <Project/>
         <WorkHistory />
-        {/** This is an experimental section and hence commented */}
-        {/* <Testimonial /> */}
-        {/** Temporarily Commenting this as the twitter api aren't working  **/}
-        {/* <Tweets /> */}
         <Contact
           onTriggerToast={(msg) => {
             setToastMessage(msg);
@@ -66,7 +69,7 @@ export default function App() {
             </div>
           </div>
         </div>
-      </ThemeContext.Provider>
+      </ThemeContext.Provider>}
     </div>
     </ApolloProvider>
   );

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./profile.scss";
-import image from "../../assets/sriram_new.png";
+import image from "../../assets/sriram_new.webp";
 import banner from "../../assets/banner.jpg";
 import { FaMapMarker } from "react-icons/fa";
 import PreloadImage from "react-preload-image";
