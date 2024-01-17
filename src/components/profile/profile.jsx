@@ -14,7 +14,7 @@ export default function Profile() {
     <div id="about" className={"profile-container-" + theme}>
       <div className="profile-text-container">
         <figure>
-          <PreloadImage className="profile-image" src={image} lazy />
+          <PreloadImage className="profile-image" src={image} duration="0ms"/>
         </figure>
         <div>
           <h1>{t("SriramBalasubramanian")}</h1>
@@ -29,7 +29,7 @@ export default function Profile() {
       </div>
       <div className="profile-about-container"></div>
       <div className="bg-img">
-        <PreloadImage src={banner} />
+        <PreloadImage src={banner} duration="0ms"/>
         <div className="credit-section">
           Photo By{" "}
           <a
