@@ -2,34 +2,32 @@
 @import "../../scss/mixin.scss";
 
 .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .project-section-heading {
     text-align: center;
   }
   min-height: 100vh;
 }
 .project-container {
+  flex: 1;
   display: flex;
-  width: 95%;
   align-items: center;
   margin: 2rem;
-  overflow-x: auto;
-  white-space: nowrap;
-  scroll-behavior: smooth;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  flex-wrap: wrap;
   @media screen and (max-width: 767px) {
     margin: 0.5rem;
     flex-direction: column;
     overflow-x: unset;
   }
   .project-card {
+    flex: 1;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    width: 40rem;
-    height: 40rem;
-    max-width: 90rem;
+    width: 30rem;
+    height: 25rem;
     margin: 2rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -95,30 +93,21 @@
       }
     }
     .image-container {
+      flex: 1;
       display: flex;
       justify-content: center;
-      width: 40rem;
+      width: 20rem;
       overflow: hidden;
+      margin: auto;
       .project-image {
         position: relative;
-        width: 40rem;
-        height: 20rem;
+        width: 25rem;
+        height: 15rem;
         transition: transform 0.2s ease-in-out;
         &:hover {
           transform: scale(1.05);
         }
       }
     }
-  }
-}
-.scroll-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .scroll-button {
-    margin: 0.5rem;
-  }
-  @media screen and (max-width: 425px) {
-    display: none;
   }
 }

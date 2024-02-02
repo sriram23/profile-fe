@@ -96,14 +96,6 @@ const Project = () => {
             4. Analog Clock: A simple analog clock made with html, css and javascript`,
     },
   ];
-  const scrollLeft = () =>{
-    const scrollElement = document.getElementById('project-container');
-    scrollElement.scrollLeft -= 745;
-}
-const scrollRight = () =>{
-    const scrollElement = document.getElementById('project-container');
-    scrollElement.scrollLeft += 745;
-}
   return (
     <section className="projects" id="projects">
       <h2 className="project-section-heading">{t("Projects")}</h2>
@@ -120,10 +112,6 @@ const scrollRight = () =>{
             />
           );
         })}
-      </div>
-      <div className="scroll-buttons">
-        <button className="scroll-button" onClick={scrollLeft}>{'<'}</button>
-        <button className="scroll-button" onClick={scrollRight}>{'>'}</button>
       </div>
     </section>
   );
