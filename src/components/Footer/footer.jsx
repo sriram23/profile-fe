@@ -11,10 +11,9 @@ export default function Footer() {
   const socialLinks = [
     {
       id: 1,
-      name: t("Social.FB"),
-      link: "https://www.facebook.com/DudeWhoCode",
-      imageLink:
-        "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/512px-Facebook_f_logo_%282021%29.svg.png",
+      name: t("Social.Linkedin"),
+      link: "https://linkedin.com/in/imsriramb",
+      imageLink: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
     },
     {
       id:2,
@@ -46,16 +45,16 @@ export default function Footer() {
     },
     {
       id: 6,
-      name: t("Social.Linkedin"),
-      link: "https://linkedin.com/in/imsriramb",
-      imageLink: "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-    },
-    {
-      id: 7,
       name: t("Social.Hackernoon"),
       link: "https://hackernoon.com/u/sriram",
       imageLink: "https://hackernoon.imgix.net/hn-icon.png",
     },
+    {
+      id: 7,
+      name: t("Social.FrontendMentor"),
+      link: "https://www.frontendmentor.io/profile/sriram23",
+      imageLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaAWHDI7LnYXinc9DWMBC3U2XOr_HxN4V7A1yQrM_xIYraEhr9eQnLEL6A3d-hIZxfhQc&usqp=CAU",
+    }
   ];
   return (
     <footer id="social" className={"footer-container-" + theme}>
