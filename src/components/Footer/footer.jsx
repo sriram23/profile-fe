@@ -82,22 +82,27 @@ export default function Footer() {
         ))}
       </div>
       {/**  Below copyright text needs to be checked */}
-      <p>
-        <b>Icon Credits:</b>
-        <li>
+      <div className="footer-links-section">
+        <div className="footer-links-row">
+        <h3>Credits</h3>
           <a href="https://www.flaticon.com/free-icons/sun" title="sun icons">
             Sun icons created by Supi Adawiah - Flaticon
           </a>
-        </li>
-        <li>
           <a
             href="https://www.flaticon.com/free-icons/half-moon"
             title="half moon icons"
           >
             Half moon icons created by joalfa - Flaticon
           </a>
-        </li>
-      </p>
+          </div>
+          <div className="footer-links-row">
+        <h3>My Works</h3>
+          <a href="https://cine-corner.web.app/">Cine Corner</a>
+          <a href="https://swiggy-clone-23.web.app/">Swiggy Landing Page (Clone)</a>
+          <a href="https://md-editor.web.app/">Markdown Editor</a>
+          <a href="https://weather-now-2.vercel.app/">Weather Now</a>
+          </div>
+      </div>
       <p>{"\u00A9 2024 - "+t("SriramBalasubramanian")}</p>
     </footer>
   );
