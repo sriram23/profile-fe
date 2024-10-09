@@ -16,6 +16,9 @@ import Splash from "./components/splash/splash";
 const hashnodeClient = new ApolloClient({
   uri: "https://gql.hashnode.com"
 })
+hashnodeClient.clearStore().then(() => {
+  console.log('Cache cleared');
+});
 
 export default function App() {
   const [toastMessage, setToastMessage] = useState("");

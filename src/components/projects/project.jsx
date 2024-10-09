@@ -7,6 +7,30 @@ const Project = () => {
   const { t } = useTranslation();
   const PROJECTS = [
     {
+      id: 13,
+      title: t("Crypto"),
+      link: "https://live-crypto-updates.web.app/",
+      githubLink: "https://github.com/sriram23/crypto-live",
+      imageLink: "https://sriram-23.vercel.app/image?file=crypto.png",
+      description: "A todo application with React and Express"
+    },
+    {
+      id: 12,
+      title: t("Todo"),
+      link: "https://all-your-tasks.web.app/",
+      githubLink: "https://github.com/sriram23/TODO-FE",
+      imageLink: "https://sriram-23.vercel.app/image?file=todo.png",
+      description: "A todo application with React and Express"
+    },
+    {
+      id: 11,
+      title: t("SemmaPasi"),
+      link: "https://semma-pasi.web.app/",
+      githubLink: "https://github.com/sriram23/semma-pasi",
+      imageLink: "https://sriram-23.vercel.app/image?file=semma-pasi.png",
+      description: "A food delivery app based on the Swiggy APIs"
+    },
+    {
       id: 10,
       title: t("CineCorner"),
       link: "https://cine-corner.web.app/",
